@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1FDABA5F2D06D11300110EDC /* UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FDABA5E2D06D11300110EDC /* UITableView.swift */; };
 		1FDABA612D06D71600110EDC /* UIImageColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FDABA602D06D71600110EDC /* UIImageColors.swift */; };
+		1FDABA672D06DCF900110EDC /* PresentableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FDABA662D06DCF900110EDC /* PresentableView.swift */; };
 		4FBD59C72D0689E800807E30 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FBD59B62D0689E800807E30 /* LaunchScreen.storyboard */; };
 		4FBD59C82D0689E800807E30 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FBD59BF2D0689E800807E30 /* Assets.xcassets */; };
 		4FBD59CA2D0689E800807E30 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FBD59B42D0689E800807E30 /* AppDelegate.swift */; };
@@ -43,6 +44,7 @@
 /* Begin PBXFileReference section */
 		1FDABA5E2D06D11300110EDC /* UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableView.swift; sourceTree = "<group>"; };
 		1FDABA602D06D71600110EDC /* UIImageColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageColors.swift; sourceTree = "<group>"; };
+		1FDABA662D06DCF900110EDC /* PresentableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentableView.swift; sourceTree = "<group>"; };
 		4FBD59702D05483000807E30 /* TasteAtlas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TasteAtlas.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FBD59892D05483300807E30 /* TasteAtlasTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TasteAtlasTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FBD59932D05483300807E30 /* TasteAtlasUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TasteAtlasUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -86,6 +88,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1FDABA652D06DCD200110EDC /* CustomTransition */ = {
+			isa = PBXGroup;
+			children = (
+				1FDABA662D06DCF900110EDC /* PresentableView.swift */,
+			);
+			path = CustomTransition;
+			sourceTree = "<group>";
+		};
 		4FBD59672D05483000807E30 = {
 			isa = PBXGroup;
 			children = (
@@ -138,6 +148,7 @@
 		4FBD59BE2D0689E800807E30 /* Miscellaneous */ = {
 			isa = PBXGroup;
 			children = (
+				1FDABA652D06DCD200110EDC /* CustomTransition */,
 				4FBD59BD2D0689E800807E30 /* Protocols */,
 			);
 			path = Miscellaneous;
@@ -336,6 +347,7 @@
 				1FDABA5F2D06D11300110EDC /* UITableView.swift in Sources */,
 				4FBD59CF2D0689E800807E30 /* TasteAtlas.xcdatamodeld in Sources */,
 				4FBD59D02D0689E800807E30 /* ViewController.swift in Sources */,
+				1FDABA672D06DCF900110EDC /* PresentableView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
