@@ -28,6 +28,10 @@
 		4FBD59D32D0689FE00807E30 /* TasteAtlasTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FBD59D12D0689FE00807E30 /* TasteAtlasTests.swift */; };
 		4FBD59D72D068A0100807E30 /* TasteAtlasUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FBD59D42D068A0100807E30 /* TasteAtlasUITests.swift */; };
 		4FBD59D82D068A0100807E30 /* TasteAtlasUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FBD59D52D068A0100807E30 /* TasteAtlasUITestsLaunchTests.swift */; };
+		4FBD59E12D070FFD00807E30 /* RestaurantListBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FBD59E02D070FFD00807E30 /* RestaurantListBuilder.swift */; };
+		4FBD59E32D07101400807E30 /* RestaurantListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FBD59E22D07101400807E30 /* RestaurantListInteractor.swift */; };
+		4FBD59E52D07102900807E30 /* RestaurantListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FBD59E42D07102900807E30 /* RestaurantListRouter.swift */; };
+		4FBD59E72D07104600807E30 /* RestaurantListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FBD59E62D07104600807E30 /* RestaurantListController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +77,10 @@
 		4FBD59D12D0689FE00807E30 /* TasteAtlasTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasteAtlasTests.swift; sourceTree = "<group>"; };
 		4FBD59D42D068A0100807E30 /* TasteAtlasUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasteAtlasUITests.swift; sourceTree = "<group>"; };
 		4FBD59D52D068A0100807E30 /* TasteAtlasUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasteAtlasUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		4FBD59E02D070FFD00807E30 /* RestaurantListBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantListBuilder.swift; sourceTree = "<group>"; };
+		4FBD59E22D07101400807E30 /* RestaurantListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantListInteractor.swift; sourceTree = "<group>"; };
+		4FBD59E42D07102900807E30 /* RestaurantListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantListRouter.swift; sourceTree = "<group>"; };
+		4FBD59E62D07104600807E30 /* RestaurantListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantListController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -230,6 +238,7 @@
 			isa = PBXGroup;
 			children = (
 				1FDABA682D06E51C00110EDC /* MapView */,
+				4FBD59D92D070E6A00807E30 /* ListView */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -265,6 +274,49 @@
 				4FBD59D52D068A0100807E30 /* TasteAtlasUITestsLaunchTests.swift */,
 			);
 			path = TasteAtlasUITests;
+			sourceTree = "<group>";
+		};
+		4FBD59D92D070E6A00807E30 /* ListView */ = {
+			isa = PBXGroup;
+			children = (
+				4FBD59DA2D070E9A00807E30 /* Builder */,
+				4FBD59DB2D070EA000807E30 /* Interactor */,
+				4FBD59DD2D070EAF00807E30 /* Router */,
+				4FBD59DC2D070EAB00807E30 /* View */,
+			);
+			path = ListView;
+			sourceTree = "<group>";
+		};
+		4FBD59DA2D070E9A00807E30 /* Builder */ = {
+			isa = PBXGroup;
+			children = (
+				4FBD59E02D070FFD00807E30 /* RestaurantListBuilder.swift */,
+			);
+			path = Builder;
+			sourceTree = "<group>";
+		};
+		4FBD59DB2D070EA000807E30 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				4FBD59E22D07101400807E30 /* RestaurantListInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		4FBD59DC2D070EAB00807E30 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4FBD59E62D07104600807E30 /* RestaurantListController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4FBD59DD2D070EAF00807E30 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				4FBD59E42D07102900807E30 /* RestaurantListRouter.swift */,
+			);
+			path = Router;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -415,11 +467,15 @@
 				4FBD59CD2D0689E800807E30 /* UIView.swift in Sources */,
 				4FBD59CE2D0689E800807E30 /* ReuseIdentifiable.swift in Sources */,
 				1FDABA782D06F63100110EDC /* MapViewRouter.swift in Sources */,
+				4FBD59E32D07101400807E30 /* RestaurantListInteractor.swift in Sources */,
 				1FDABA5F2D06D11300110EDC /* UITableView.swift in Sources */,
 				4FBD59CF2D0689E800807E30 /* TasteAtlas.xcdatamodeld in Sources */,
+				4FBD59E12D070FFD00807E30 /* RestaurantListBuilder.swift in Sources */,
 				4FBD59D02D0689E800807E30 /* ViewController.swift in Sources */,
 				1FDABA672D06DCF900110EDC /* PresentableView.swift in Sources */,
 				1FDABA7A2D06F95400110EDC /* MapViewController.swift in Sources */,
+				4FBD59E72D07104600807E30 /* RestaurantListController.swift in Sources */,
+				4FBD59E52D07102900807E30 /* RestaurantListRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

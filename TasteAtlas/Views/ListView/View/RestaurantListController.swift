@@ -1,18 +1,17 @@
 //
-//  MapViewController.swift
+//  RestaurantListController.swift
 //  TasteAtlas
 //
-//  Created by IT-MAC-02 on 2024/12/9.
+//  Created by Tai Chin Huang on 2024/12/9.
 //
 
-import Combine
 import UIKit
 
-final class MapViewController: UIViewController {
+final class RestaurantListController: UIViewController {
     
-    private let interactor: MapViewInteractor
+    private let interactor: RestaurantListInteractor
     
-    init(interactor: MapViewInteractor) {
+    init(interactor: RestaurantListInteractor) {
         self.interactor = interactor
         super.init(nibName: nil, bundle: nil)
         
