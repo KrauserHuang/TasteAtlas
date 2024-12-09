@@ -29,8 +29,12 @@ extension UICollectionView {
     }
     
     func dequeueCell<T: UICollectionViewCell>(at indexPath: IndexPath) -> T {
-        guard let cell = dequeueReusableCell(withReuseIdentifier: String(describing: T.self), for: indexPath) as? T else { fatalError("Unable to dequeue cell") }
+        guard let cell = dequeueReusableCell(withReuseIdentifier: T.reuseIdentifier, for: indexPath) as? T else { fatalError("Unable to dequeue cell💥💥💥💥💥") }
         return cell
+    }
+    
+    func dequeueHeaderView<T: UICollectionReusableView>(_ view: T.Type, at indexPath: IndexPath) -> UICollectionReusableView {
+        dequeueReusableSupplementaryView(ofKind: UICollectionView.header, withReuseIdentifier: view.reuseIdentifier, for: indexPath)
     }
     
     func dequeueFooterView<T: UICollectionReusableView>(_ view: T.Type, at indexPath: IndexPath) -> UICollectionReusableView {

@@ -119,8 +119,8 @@
 		4FBD59BB2D0689E800807E30 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				4FBD59B92D0689E800807E30 /* UICollectionView.swift */,
 				4FBD59BA2D0689E800807E30 /* UIView.swift */,
+				4FBD59B92D0689E800807E30 /* UICollectionView.swift */,
 				1FDABA5E2D06D11300110EDC /* UITableView.swift */,
 				1FDABA602D06D71600110EDC /* UIImageColors.swift */,
 			);
