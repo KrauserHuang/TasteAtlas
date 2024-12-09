@@ -237,12 +237,12 @@
 		4FBD59C52D0689E800807E30 /* TasteAtlas */ = {
 			isa = PBXGroup;
 			children = (
-				1FDABA622D06DBE600110EDC /* CustomUI */,
 				4FBD59B82D0689E800807E30 /* Application */,
-				4FBD59BB2D0689E800807E30 /* Extensions */,
-				4FBD59BE2D0689E800807E30 /* Miscellaneous */,
-				4FBD59C02D0689E800807E30 /* Resources */,
 				4FBD59C12D0689E800807E30 /* Views */,
+				4FBD59BE2D0689E800807E30 /* Miscellaneous */,
+				1FDABA622D06DBE600110EDC /* CustomUI */,
+				4FBD59BB2D0689E800807E30 /* Extensions */,
+				4FBD59C02D0689E800807E30 /* Resources */,
 				4FBD59C22D0689E800807E30 /* Info.plist */,
 				4FBD59C32D0689E800807E30 /* TasteAtlas.xcdatamodeld */,
 				4FBD59C42D0689E800807E30 /* ViewController.swift */,
