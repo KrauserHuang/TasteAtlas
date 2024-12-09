@@ -12,6 +12,10 @@
 		1FDABA642D06DC0B00110EDC /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FDABA632D06DC0B00110EDC /* TabBarController.swift */; };
 		1FDABA672D06DCF900110EDC /* PresentableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FDABA662D06DCF900110EDC /* PresentableView.swift */; };
 		1FDABA722D06E6FB00110EDC /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FDABA712D06E6FB00110EDC /* NavigationController.swift */; };
+		1FDABA742D06F61800110EDC /* MapViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FDABA732D06F61800110EDC /* MapViewBuilder.swift */; };
+		1FDABA762D06F62500110EDC /* MapViewInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FDABA752D06F62500110EDC /* MapViewInteractor.swift */; };
+		1FDABA782D06F63100110EDC /* MapViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FDABA772D06F63100110EDC /* MapViewRouter.swift */; };
+		1FDABA7A2D06F95400110EDC /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FDABA792D06F95400110EDC /* MapViewController.swift */; };
 		4FBD59C72D0689E800807E30 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FBD59B62D0689E800807E30 /* LaunchScreen.storyboard */; };
 		4FBD59C82D0689E800807E30 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FBD59BF2D0689E800807E30 /* Assets.xcassets */; };
 		4FBD59CA2D0689E800807E30 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FBD59B42D0689E800807E30 /* AppDelegate.swift */; };
@@ -49,6 +53,10 @@
 		1FDABA632D06DC0B00110EDC /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		1FDABA662D06DCF900110EDC /* PresentableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentableView.swift; sourceTree = "<group>"; };
 		1FDABA712D06E6FB00110EDC /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
+		1FDABA732D06F61800110EDC /* MapViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewBuilder.swift; sourceTree = "<group>"; };
+		1FDABA752D06F62500110EDC /* MapViewInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewInteractor.swift; sourceTree = "<group>"; };
+		1FDABA772D06F63100110EDC /* MapViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewRouter.swift; sourceTree = "<group>"; };
+		1FDABA792D06F95400110EDC /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		4FBD59702D05483000807E30 /* TasteAtlas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TasteAtlas.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FBD59892D05483300807E30 /* TasteAtlasTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TasteAtlasTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FBD59932D05483300807E30 /* TasteAtlasUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TasteAtlasUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -107,6 +115,49 @@
 				1FDABA662D06DCF900110EDC /* PresentableView.swift */,
 			);
 			path = CustomTransition;
+			sourceTree = "<group>";
+		};
+		1FDABA682D06E51C00110EDC /* MapView */ = {
+			isa = PBXGroup;
+			children = (
+				1FDABA6E2D06E6A400110EDC /* Builder */,
+				1FDABA692D06E53900110EDC /* Interactor */,
+				1FDABA6A2D06E54600110EDC /* Router */,
+				1FDABA6B2D06E55100110EDC /* View */,
+			);
+			path = MapView;
+			sourceTree = "<group>";
+		};
+		1FDABA692D06E53900110EDC /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				1FDABA752D06F62500110EDC /* MapViewInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		1FDABA6A2D06E54600110EDC /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				1FDABA772D06F63100110EDC /* MapViewRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		1FDABA6B2D06E55100110EDC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1FDABA792D06F95400110EDC /* MapViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1FDABA6E2D06E6A400110EDC /* Builder */ = {
+			isa = PBXGroup;
+			children = (
+				1FDABA732D06F61800110EDC /* MapViewBuilder.swift */,
+			);
+			path = Builder;
 			sourceTree = "<group>";
 		};
 		4FBD59672D05483000807E30 = {
@@ -178,6 +229,7 @@
 		4FBD59C12D0689E800807E30 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				1FDABA682D06E51C00110EDC /* MapView */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -352,18 +404,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1FDABA762D06F62500110EDC /* MapViewInteractor.swift in Sources */,
 				4FBD59CA2D0689E800807E30 /* AppDelegate.swift in Sources */,
 				4FBD59CB2D0689E800807E30 /* SceneDelegate.swift in Sources */,
 				4FBD59CC2D0689E800807E30 /* UICollectionView.swift in Sources */,
+				1FDABA742D06F61800110EDC /* MapViewBuilder.swift in Sources */,
 				1FDABA642D06DC0B00110EDC /* TabBarController.swift in Sources */,
 				1FDABA722D06E6FB00110EDC /* NavigationController.swift in Sources */,
 				1FDABA612D06D71600110EDC /* UIImageColors.swift in Sources */,
 				4FBD59CD2D0689E800807E30 /* UIView.swift in Sources */,
 				4FBD59CE2D0689E800807E30 /* ReuseIdentifiable.swift in Sources */,
+				1FDABA782D06F63100110EDC /* MapViewRouter.swift in Sources */,
 				1FDABA5F2D06D11300110EDC /* UITableView.swift in Sources */,
 				4FBD59CF2D0689E800807E30 /* TasteAtlas.xcdatamodeld in Sources */,
 				4FBD59D02D0689E800807E30 /* ViewController.swift in Sources */,
 				1FDABA672D06DCF900110EDC /* PresentableView.swift in Sources */,
+				1FDABA7A2D06F95400110EDC /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
