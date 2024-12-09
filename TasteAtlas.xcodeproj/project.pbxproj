@@ -9,7 +9,9 @@
 /* Begin PBXBuildFile section */
 		1FDABA5F2D06D11300110EDC /* UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FDABA5E2D06D11300110EDC /* UITableView.swift */; };
 		1FDABA612D06D71600110EDC /* UIImageColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FDABA602D06D71600110EDC /* UIImageColors.swift */; };
+		1FDABA642D06DC0B00110EDC /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FDABA632D06DC0B00110EDC /* TabBarController.swift */; };
 		1FDABA672D06DCF900110EDC /* PresentableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FDABA662D06DCF900110EDC /* PresentableView.swift */; };
+		1FDABA722D06E6FB00110EDC /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FDABA712D06E6FB00110EDC /* NavigationController.swift */; };
 		4FBD59C72D0689E800807E30 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FBD59B62D0689E800807E30 /* LaunchScreen.storyboard */; };
 		4FBD59C82D0689E800807E30 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FBD59BF2D0689E800807E30 /* Assets.xcassets */; };
 		4FBD59CA2D0689E800807E30 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FBD59B42D0689E800807E30 /* AppDelegate.swift */; };
@@ -44,7 +46,9 @@
 /* Begin PBXFileReference section */
 		1FDABA5E2D06D11300110EDC /* UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableView.swift; sourceTree = "<group>"; };
 		1FDABA602D06D71600110EDC /* UIImageColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageColors.swift; sourceTree = "<group>"; };
+		1FDABA632D06DC0B00110EDC /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		1FDABA662D06DCF900110EDC /* PresentableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentableView.swift; sourceTree = "<group>"; };
+		1FDABA712D06E6FB00110EDC /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		4FBD59702D05483000807E30 /* TasteAtlas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TasteAtlas.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FBD59892D05483300807E30 /* TasteAtlasTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TasteAtlasTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FBD59932D05483300807E30 /* TasteAtlasUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TasteAtlasUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -88,6 +92,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1FDABA622D06DBE600110EDC /* CustomUI */ = {
+			isa = PBXGroup;
+			children = (
+				1FDABA632D06DC0B00110EDC /* TabBarController.swift */,
+				1FDABA712D06E6FB00110EDC /* NavigationController.swift */,
+			);
+			path = CustomUI;
+			sourceTree = "<group>";
+		};
 		1FDABA652D06DCD200110EDC /* CustomTransition */ = {
 			isa = PBXGroup;
 			children = (
@@ -172,6 +185,7 @@
 		4FBD59C52D0689E800807E30 /* TasteAtlas */ = {
 			isa = PBXGroup;
 			children = (
+				1FDABA622D06DBE600110EDC /* CustomUI */,
 				4FBD59B82D0689E800807E30 /* Application */,
 				4FBD59BB2D0689E800807E30 /* Extensions */,
 				4FBD59BE2D0689E800807E30 /* Miscellaneous */,
@@ -341,6 +355,8 @@
 				4FBD59CA2D0689E800807E30 /* AppDelegate.swift in Sources */,
 				4FBD59CB2D0689E800807E30 /* SceneDelegate.swift in Sources */,
 				4FBD59CC2D0689E800807E30 /* UICollectionView.swift in Sources */,
+				1FDABA642D06DC0B00110EDC /* TabBarController.swift in Sources */,
+				1FDABA722D06E6FB00110EDC /* NavigationController.swift in Sources */,
 				1FDABA612D06D71600110EDC /* UIImageColors.swift in Sources */,
 				4FBD59CD2D0689E800807E30 /* UIView.swift in Sources */,
 				4FBD59CE2D0689E800807E30 /* ReuseIdentifiable.swift in Sources */,
