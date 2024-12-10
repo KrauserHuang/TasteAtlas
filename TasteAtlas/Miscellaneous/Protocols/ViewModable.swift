@@ -17,5 +17,5 @@ protocol ViewModable where Self: UIView {
     
     /// bind the view model to the view and renders all the view model values in the view
     /// - Parameter viewModel: The given view model to render
-    func bind(to viewModel: ViewModel)
+    func setViewModel(_ viewModel: ViewModel)
 }
