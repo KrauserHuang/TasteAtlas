@@ -11,6 +11,8 @@
 		1F0493062D07DD5000C861DD /* AccountInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0493052D07DD5000C861DD /* AccountInteractor.swift */; };
 		1F0493082D07DD5D00C861DD /* AccountRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0493072D07DD5D00C861DD /* AccountRouter.swift */; };
 		1F04930A2D07DD7800C861DD /* AccountController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0493092D07DD7800C861DD /* AccountController.swift */; };
+		1F0493102D08216800C861DD /* ViewModable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F04930F2D08216800C861DD /* ViewModable.swift */; };
+		1F0493122D08235A00C861DD /* Interactable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0493112D08235900C861DD /* Interactable.swift */; };
 		1FDABA5F2D06D11300110EDC /* UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FDABA5E2D06D11300110EDC /* UITableView.swift */; };
 		1FDABA612D06D71600110EDC /* UIImageColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FDABA602D06D71600110EDC /* UIImageColors.swift */; };
 		1FDABA642D06DC0B00110EDC /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FDABA632D06DC0B00110EDC /* TabBarController.swift */; };
@@ -60,6 +62,8 @@
 		1F0493052D07DD5000C861DD /* AccountInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountInteractor.swift; sourceTree = "<group>"; };
 		1F0493072D07DD5D00C861DD /* AccountRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountRouter.swift; sourceTree = "<group>"; };
 		1F0493092D07DD7800C861DD /* AccountController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountController.swift; sourceTree = "<group>"; };
+		1F04930F2D08216800C861DD /* ViewModable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModable.swift; sourceTree = "<group>"; };
+		1F0493112D08235900C861DD /* Interactable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interactable.swift; sourceTree = "<group>"; };
 		1FDABA5E2D06D11300110EDC /* UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableView.swift; sourceTree = "<group>"; };
 		1FDABA602D06D71600110EDC /* UIImageColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageColors.swift; sourceTree = "<group>"; };
 		1FDABA632D06DC0B00110EDC /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
@@ -264,6 +268,8 @@
 			isa = PBXGroup;
 			children = (
 				4FBD59BC2D0689E800807E30 /* ReuseIdentifiable.swift */,
+				1F04930F2D08216800C861DD /* ViewModable.swift */,
+				1F0493112D08235900C861DD /* Interactable.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -511,6 +517,7 @@
 				1FDABA762D06F62500110EDC /* MapViewInteractor.swift in Sources */,
 				4FBD59CA2D0689E800807E30 /* AppDelegate.swift in Sources */,
 				4FBD59CB2D0689E800807E30 /* SceneDelegate.swift in Sources */,
+				1F0493102D08216800C861DD /* ViewModable.swift in Sources */,
 				1F04930A2D07DD7800C861DD /* AccountController.swift in Sources */,
 				4FBD59CC2D0689E800807E30 /* UICollectionView.swift in Sources */,
 				1FDABA742D06F61800110EDC /* MapViewBuilder.swift in Sources */,
@@ -524,6 +531,7 @@
 				1F0493082D07DD5D00C861DD /* AccountRouter.swift in Sources */,
 				1F0493062D07DD5000C861DD /* AccountInteractor.swift in Sources */,
 				4FBD59E32D07101400807E30 /* RestaurantListInteractor.swift in Sources */,
+				1F0493122D08235A00C861DD /* Interactable.swift in Sources */,
 				1FDABA5F2D06D11300110EDC /* UITableView.swift in Sources */,
 				4FBD59CF2D0689E800807E30 /* TasteAtlas.xcdatamodeld in Sources */,
 				4FBD59E12D070FFD00807E30 /* RestaurantListBuilder.swift in Sources */,
