@@ -14,7 +14,7 @@ final class MapViewBuilder {
     static func build() -> NavigationController {
         let router = MapViewRouter()
         let interactor = MapViewInteractor()
-        let viewController = MapViewController(interactor: interactor)
+        let viewController = MapViewController(viewModel: .init(), interactor: interactor)
         let navigationController = NavigationController(rootViewController: viewController)
         navigationController.setNavbarApp(color: .systemRed)
         return navigationController

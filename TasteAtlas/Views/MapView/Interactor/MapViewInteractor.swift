@@ -8,7 +8,11 @@
 import Combine
 import UIKit
 
-final class MapViewInteractor {
+protocol MapViewInteractable {
+    
+}
+
+final class MapViewInteractor: MapViewInteractable {
     
     private var subscriptions: Set<AnyCancellable> = []
 }

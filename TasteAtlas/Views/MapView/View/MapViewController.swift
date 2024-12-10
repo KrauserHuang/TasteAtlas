@@ -8,14 +8,18 @@
 import Combine
 import UIKit
 
-final class MapViewController: UIViewController {
+protocol MapViewProtocol: AnyObject {
+    var interaction: AnyPublisher<MapView.Interaction, Never> { get }
+//    var viewModel: MapView.ViewModel { get }
+}
+
+final class MapViewController: ViewController<MapView> {
     
-    private let interactor: MapViewInteractor
+    private let interactor: MapViewInteractable
     
-    init(interactor: MapViewInteractor) {
+    init(viewModel: MapView.ViewModel, interactor: MapViewInteractable) {
         self.interactor = interactor
-        super.init(nibName: nil, bundle: nil)
-        
+        super.init(viewModel: viewModel)
     }
     
     required init?(coder: NSCoder) {
