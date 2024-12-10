@@ -8,7 +8,9 @@
 import UIKit
 
 /// A builder object used for building the `MapView` with all its' dependencies
-enum MapViewBuilder {
+final class MapViewBuilder {
+    /// Build a `MapViewController` wrapped in a `NavigationController`
+    /// - Returns: A new navigation controller with the map view controller as its' root view controller
     static func build() -> NavigationController {
         let router = MapViewRouter()
         let interactor = MapViewInteractor()
