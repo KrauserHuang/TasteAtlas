@@ -15,6 +15,9 @@
 		1F04930E2D07F7E500C861DD /* SpinnerFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F04930D2D07F7E500C861DD /* SpinnerFooterView.swift */; };
 		1F0493102D08216800C861DD /* ViewModable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F04930F2D08216800C861DD /* ViewModable.swift */; };
 		1F0493122D08235A00C861DD /* Interactable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0493112D08235900C861DD /* Interactable.swift */; };
+		1F1A6EBA2D0980AD0033CB71 /* NetworkConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F1A6EB92D0980AD0033CB71 /* NetworkConfig.swift */; };
+		1F1A6EBC2D09818F0033CB71 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F1A6EBB2D09818F0033CB71 /* HTTPMethod.swift */; };
+		1F1A6EBE2D0981CB0033CB71 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F1A6EBD2D0981CB0033CB71 /* Endpoint.swift */; };
 		1FDABA5F2D06D11300110EDC /* UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FDABA5E2D06D11300110EDC /* UITableView.swift */; };
 		1FDABA612D06D71600110EDC /* UIImageColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FDABA602D06D71600110EDC /* UIImageColors.swift */; };
 		1FDABA642D06DC0B00110EDC /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FDABA632D06DC0B00110EDC /* TabBarController.swift */; };
@@ -70,6 +73,9 @@
 		1F04930D2D07F7E500C861DD /* SpinnerFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinnerFooterView.swift; sourceTree = "<group>"; };
 		1F04930F2D08216800C861DD /* ViewModable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModable.swift; sourceTree = "<group>"; };
 		1F0493112D08235900C861DD /* Interactable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interactable.swift; sourceTree = "<group>"; };
+		1F1A6EB92D0980AD0033CB71 /* NetworkConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConfig.swift; sourceTree = "<group>"; };
+		1F1A6EBB2D09818F0033CB71 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		1F1A6EBD2D0981CB0033CB71 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		1FDABA5E2D06D11300110EDC /* UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableView.swift; sourceTree = "<group>"; };
 		1FDABA602D06D71600110EDC /* UIImageColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageColors.swift; sourceTree = "<group>"; };
 		1FDABA632D06DC0B00110EDC /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
@@ -169,6 +175,24 @@
 				1F0493032D07DD3F00C861DD /* AccountBuilder.swift */,
 			);
 			path = Builder;
+			sourceTree = "<group>";
+		};
+		1F1A6EB72D09806D0033CB71 /* Infrastructure */ = {
+			isa = PBXGroup;
+			children = (
+				1F1A6EB82D0980890033CB71 /* Network */,
+			);
+			path = Infrastructure;
+			sourceTree = "<group>";
+		};
+		1F1A6EB82D0980890033CB71 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				1F1A6EB92D0980AD0033CB71 /* NetworkConfig.swift */,
+				1F1A6EBB2D09818F0033CB71 /* HTTPMethod.swift */,
+				1F1A6EBD2D0981CB0033CB71 /* Endpoint.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 		1FDABA622D06DBE600110EDC /* CustomUI */ = {
@@ -318,6 +342,7 @@
 			isa = PBXGroup;
 			children = (
 				4FBD59B82D0689E800807E30 /* Application */,
+				1F1A6EB72D09806D0033CB71 /* Infrastructure */,
 				4FBD59C12D0689E800807E30 /* Views */,
 				4FBD59BE2D0689E800807E30 /* Miscellaneous */,
 				1FDABA622D06DBE600110EDC /* CustomUI */,
@@ -542,7 +567,9 @@
 				1F04930E2D07F7E500C861DD /* SpinnerFooterView.swift in Sources */,
 				4FBD59CE2D0689E800807E30 /* ReuseIdentifiable.swift in Sources */,
 				4FBD59E92D08799700807E30 /* MapView.swift in Sources */,
+				1F1A6EBE2D0981CB0033CB71 /* Endpoint.swift in Sources */,
 				1FDABA782D06F63100110EDC /* MapViewRouter.swift in Sources */,
+				1F1A6EBA2D0980AD0033CB71 /* NetworkConfig.swift in Sources */,
 				1F0493042D07DD3F00C861DD /* AccountBuilder.swift in Sources */,
 				1F0493082D07DD5D00C861DD /* AccountRouter.swift in Sources */,
 				1F0493062D07DD5000C861DD /* AccountInteractor.swift in Sources */,
@@ -553,6 +580,7 @@
 				4FBD59E12D070FFD00807E30 /* RestaurantListBuilder.swift in Sources */,
 				4FBD59D02D0689E800807E30 /* ViewController.swift in Sources */,
 				1FDABA672D06DCF900110EDC /* PresentableView.swift in Sources */,
+				1F1A6EBC2D09818F0033CB71 /* HTTPMethod.swift in Sources */,
 				1FDABA7A2D06F95400110EDC /* MapViewController.swift in Sources */,
 				4FBD59E72D07104600807E30 /* RestaurantListController.swift in Sources */,
 				4FBD59E52D07102900807E30 /* RestaurantListRouter.swift in Sources */,
