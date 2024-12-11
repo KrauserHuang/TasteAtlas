@@ -15,6 +15,10 @@
 		1F04930E2D07F7E500C861DD /* SpinnerFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F04930D2D07F7E500C861DD /* SpinnerFooterView.swift */; };
 		1F0493102D08216800C861DD /* ViewModable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F04930F2D08216800C861DD /* ViewModable.swift */; };
 		1F0493122D08235A00C861DD /* Interactable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0493112D08235900C861DD /* Interactable.swift */; };
+		1F1A6EAD2D0947820033CB71 /* SearchViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F1A6EAC2D0947820033CB71 /* SearchViewBuilder.swift */; };
+		1F1A6EAF2D0947C90033CB71 /* SearchViewInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F1A6EAE2D0947C90033CB71 /* SearchViewInteractor.swift */; };
+		1F1A6EB12D0947D50033CB71 /* SearchViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F1A6EB02D0947D50033CB71 /* SearchViewRouter.swift */; };
+		1F1A6EB32D0947E70033CB71 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F1A6EB22D0947E70033CB71 /* SearchViewController.swift */; };
 		1F1A6EBA2D0980AD0033CB71 /* NetworkConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F1A6EB92D0980AD0033CB71 /* NetworkConfig.swift */; };
 		1F1A6EBC2D09818F0033CB71 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F1A6EBB2D09818F0033CB71 /* HTTPMethod.swift */; };
 		1F1A6EBE2D0981CB0033CB71 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F1A6EBD2D0981CB0033CB71 /* Endpoint.swift */; };
@@ -73,6 +77,10 @@
 		1F04930D2D07F7E500C861DD /* SpinnerFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinnerFooterView.swift; sourceTree = "<group>"; };
 		1F04930F2D08216800C861DD /* ViewModable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModable.swift; sourceTree = "<group>"; };
 		1F0493112D08235900C861DD /* Interactable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interactable.swift; sourceTree = "<group>"; };
+		1F1A6EAC2D0947820033CB71 /* SearchViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewBuilder.swift; sourceTree = "<group>"; };
+		1F1A6EAE2D0947C90033CB71 /* SearchViewInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewInteractor.swift; sourceTree = "<group>"; };
+		1F1A6EB02D0947D50033CB71 /* SearchViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewRouter.swift; sourceTree = "<group>"; };
+		1F1A6EB22D0947E70033CB71 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		1F1A6EB92D0980AD0033CB71 /* NetworkConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConfig.swift; sourceTree = "<group>"; };
 		1F1A6EBB2D09818F0033CB71 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
 		1F1A6EBD2D0981CB0033CB71 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
@@ -173,6 +181,49 @@
 			isa = PBXGroup;
 			children = (
 				1F0493032D07DD3F00C861DD /* AccountBuilder.swift */,
+			);
+			path = Builder;
+			sourceTree = "<group>";
+		};
+		1F1A6EA72D0944C80033CB71 /* SearchView */ = {
+			isa = PBXGroup;
+			children = (
+				1F1A6EAB2D09450E0033CB71 /* Builder */,
+				1F1A6EAA2D0944FE0033CB71 /* Interactor */,
+				1F1A6EA92D0944F20033CB71 /* Router */,
+				1F1A6EA82D0944DE0033CB71 /* View */,
+			);
+			path = SearchView;
+			sourceTree = "<group>";
+		};
+		1F1A6EA82D0944DE0033CB71 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1F1A6EB22D0947E70033CB71 /* SearchViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1F1A6EA92D0944F20033CB71 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				1F1A6EB02D0947D50033CB71 /* SearchViewRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		1F1A6EAA2D0944FE0033CB71 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				1F1A6EAE2D0947C90033CB71 /* SearchViewInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		1F1A6EAB2D09450E0033CB71 /* Builder */ = {
+			isa = PBXGroup;
+			children = (
+				1F1A6EAC2D0947820033CB71 /* SearchViewBuilder.swift */,
 			);
 			path = Builder;
 			sourceTree = "<group>";
@@ -334,6 +385,7 @@
 				1FDABA682D06E51C00110EDC /* MapView */,
 				4FBD59D92D070E6A00807E30 /* ListView */,
 				1F0492FE2D07DB4000C861DD /* AccountView */,
+				1F1A6EA72D0944C80033CB71 /* SearchView */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -552,6 +604,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1FDABA762D06F62500110EDC /* MapViewInteractor.swift in Sources */,
+				1F1A6EAF2D0947C90033CB71 /* SearchViewInteractor.swift in Sources */,
 				1F04930C2D07F41700C861DD /* SearchController.swift in Sources */,
 				4FBD59CA2D0689E800807E30 /* AppDelegate.swift in Sources */,
 				4FBD59CB2D0689E800807E30 /* SceneDelegate.swift in Sources */,
@@ -559,6 +612,8 @@
 				1F04930A2D07DD7800C861DD /* AccountController.swift in Sources */,
 				4FBD59CC2D0689E800807E30 /* UICollectionView.swift in Sources */,
 				1FDABA742D06F61800110EDC /* MapViewBuilder.swift in Sources */,
+				1F1A6EAD2D0947820033CB71 /* SearchViewBuilder.swift in Sources */,
+				1F1A6EB12D0947D50033CB71 /* SearchViewRouter.swift in Sources */,
 				1FDABA642D06DC0B00110EDC /* TabBarController.swift in Sources */,
 				1FDABA722D06E6FB00110EDC /* NavigationController.swift in Sources */,
 				1FDABA612D06D71600110EDC /* UIImageColors.swift in Sources */,
@@ -569,6 +624,7 @@
 				4FBD59E92D08799700807E30 /* MapView.swift in Sources */,
 				1F1A6EBE2D0981CB0033CB71 /* Endpoint.swift in Sources */,
 				1FDABA782D06F63100110EDC /* MapViewRouter.swift in Sources */,
+				1F1A6EB32D0947E70033CB71 /* SearchViewController.swift in Sources */,
 				1F1A6EBA2D0980AD0033CB71 /* NetworkConfig.swift in Sources */,
 				1F0493042D07DD3F00C861DD /* AccountBuilder.swift in Sources */,
 				1F0493082D07DD5D00C861DD /* AccountRouter.swift in Sources */,
