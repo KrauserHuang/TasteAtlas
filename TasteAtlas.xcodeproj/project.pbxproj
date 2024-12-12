@@ -22,6 +22,10 @@
 		1F1A6EBA2D0980AD0033CB71 /* NetworkConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F1A6EB92D0980AD0033CB71 /* NetworkConfig.swift */; };
 		1F1A6EBC2D09818F0033CB71 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F1A6EBB2D09818F0033CB71 /* HTTPMethod.swift */; };
 		1F1A6EBE2D0981CB0033CB71 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F1A6EBD2D0981CB0033CB71 /* Endpoint.swift */; };
+		1F38F5FF2D0AB0E700E6D078 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F38F5FE2D0AB0E700E6D078 /* NetworkService.swift */; };
+		1F38F6012D0AB4EA00E6D078 /* DataTransferService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F38F6002D0AB4EA00E6D078 /* DataTransferService.swift */; };
+		1F38F6032D0AB83400E6D078 /* Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F38F6022D0AB83400E6D078 /* Dictionary.swift */; };
+		1F38F6052D0AB8CC00E6D078 /* Encodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F38F6042D0AB8CC00E6D078 /* Encodable.swift */; };
 		1FDABA5F2D06D11300110EDC /* UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FDABA5E2D06D11300110EDC /* UITableView.swift */; };
 		1FDABA612D06D71600110EDC /* UIImageColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FDABA602D06D71600110EDC /* UIImageColors.swift */; };
 		1FDABA642D06DC0B00110EDC /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FDABA632D06DC0B00110EDC /* TabBarController.swift */; };
@@ -84,6 +88,10 @@
 		1F1A6EB92D0980AD0033CB71 /* NetworkConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConfig.swift; sourceTree = "<group>"; };
 		1F1A6EBB2D09818F0033CB71 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
 		1F1A6EBD2D0981CB0033CB71 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		1F38F5FE2D0AB0E700E6D078 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		1F38F6002D0AB4EA00E6D078 /* DataTransferService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTransferService.swift; sourceTree = "<group>"; };
+		1F38F6022D0AB83400E6D078 /* Dictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dictionary.swift; sourceTree = "<group>"; };
+		1F38F6042D0AB8CC00E6D078 /* Encodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Encodable.swift; sourceTree = "<group>"; };
 		1FDABA5E2D06D11300110EDC /* UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableView.swift; sourceTree = "<group>"; };
 		1FDABA602D06D71600110EDC /* UIImageColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageColors.swift; sourceTree = "<group>"; };
 		1FDABA632D06DC0B00110EDC /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
@@ -260,9 +268,11 @@
 		1F1A6EB82D0980890033CB71 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				1F38F6002D0AB4EA00E6D078 /* DataTransferService.swift */,
 				1F1A6EB92D0980AD0033CB71 /* NetworkConfig.swift */,
 				1F1A6EBB2D09818F0033CB71 /* HTTPMethod.swift */,
 				1F1A6EBD2D0981CB0033CB71 /* Endpoint.swift */,
+				1F38F5FE2D0AB0E700E6D078 /* NetworkService.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -369,6 +379,8 @@
 				4FBD59B92D0689E800807E30 /* UICollectionView.swift */,
 				1FDABA5E2D06D11300110EDC /* UITableView.swift */,
 				1FDABA602D06D71600110EDC /* UIImageColors.swift */,
+				1F38F6022D0AB83400E6D078 /* Dictionary.swift */,
+				1F38F6042D0AB8CC00E6D078 /* Encodable.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -628,12 +640,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				1FDABA762D06F62500110EDC /* MapViewInteractor.swift in Sources */,
+				1F38F6052D0AB8CC00E6D078 /* Encodable.swift in Sources */,
 				1F1A6EAF2D0947C90033CB71 /* SearchViewInteractor.swift in Sources */,
 				1F04930C2D07F41700C861DD /* SearchController.swift in Sources */,
 				4FBD59CA2D0689E800807E30 /* AppDelegate.swift in Sources */,
+				1F38F6012D0AB4EA00E6D078 /* DataTransferService.swift in Sources */,
 				4FBD59CB2D0689E800807E30 /* SceneDelegate.swift in Sources */,
 				1F0493102D08216800C861DD /* ViewModable.swift in Sources */,
 				1F04930A2D07DD7800C861DD /* AccountController.swift in Sources */,
+				1F38F6032D0AB83400E6D078 /* Dictionary.swift in Sources */,
 				4FBD59CC2D0689E800807E30 /* UICollectionView.swift in Sources */,
 				1FDABA742D06F61800110EDC /* MapViewBuilder.swift in Sources */,
 				1F1A6EAD2D0947820033CB71 /* SearchViewBuilder.swift in Sources */,
@@ -663,6 +678,7 @@
 				1F1A6EBC2D09818F0033CB71 /* HTTPMethod.swift in Sources */,
 				1FDABA7A2D06F95400110EDC /* MapViewController.swift in Sources */,
 				4FBD59E72D07104600807E30 /* RestaurantListController.swift in Sources */,
+				1F38F5FF2D0AB0E700E6D078 /* NetworkService.swift in Sources */,
 				4FBD59E52D07102900807E30 /* RestaurantListRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
