@@ -21,10 +21,20 @@ class SpinnerFooterView: UICollectionReusableView {
         super.init(frame: frame)
         
         addSubview(spinner)
-        spinner.startAnimating()
+        spinner.pinToSuperview(with: .init(top: -30, left: 0, bottom: 0, right: 0))
+        startAnimating()
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    // MARK: - Public
+    public func startAnimating() {
+        spinner.startAnimating()
+    }
+    
+    public func stopAnimating() {
+        spinner.stopAnimating()
     }
 }
