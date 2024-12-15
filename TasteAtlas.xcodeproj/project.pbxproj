@@ -35,6 +35,7 @@
 		1FDABA762D06F62500110EDC /* MapViewInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FDABA752D06F62500110EDC /* MapViewInteractor.swift */; };
 		1FDABA782D06F63100110EDC /* MapViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FDABA772D06F63100110EDC /* MapViewRouter.swift */; };
 		1FDABA7A2D06F95400110EDC /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FDABA792D06F95400110EDC /* MapViewController.swift */; };
+		4F7996C92D0D35BF00ED1312 /* SearchBarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7996C82D0D35BF00ED1312 /* SearchBarButton.swift */; };
 		4F7996CE2D0E81EF00ED1312 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7996CD2D0E81EF00ED1312 /* UIColor.swift */; };
 		4FBD59C72D0689E800807E30 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FBD59B62D0689E800807E30 /* LaunchScreen.storyboard */; };
 		4FBD59C82D0689E800807E30 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FBD59BF2D0689E800807E30 /* Assets.xcassets */; };
@@ -102,6 +103,7 @@
 		1FDABA752D06F62500110EDC /* MapViewInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewInteractor.swift; sourceTree = "<group>"; };
 		1FDABA772D06F63100110EDC /* MapViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewRouter.swift; sourceTree = "<group>"; };
 		1FDABA792D06F95400110EDC /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		4F7996C82D0D35BF00ED1312 /* SearchBarButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarButton.swift; sourceTree = "<group>"; };
 		4F7996CD2D0E81EF00ED1312 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		4FBD59702D05483000807E30 /* TasteAtlas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TasteAtlas.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FBD59892D05483300807E30 /* TasteAtlasTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TasteAtlasTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -287,6 +289,7 @@
 				1F04930B2D07F41700C861DD /* SearchController.swift */,
 				1F04930D2D07F7E500C861DD /* SpinnerFooterView.swift */,
 				4FBD59C42D0689E800807E30 /* ViewController.swift */,
+				4F7996C82D0D35BF00ED1312 /* SearchBarButton.swift */,
 			);
 			path = CustomUI;
 			sourceTree = "<group>";
@@ -680,6 +683,7 @@
 				4FBD59D02D0689E800807E30 /* ViewController.swift in Sources */,
 				1FDABA672D06DCF900110EDC /* PresentableView.swift in Sources */,
 				1F1A6EBC2D09818F0033CB71 /* HTTPMethod.swift in Sources */,
+				4F7996C92D0D35BF00ED1312 /* SearchBarButton.swift in Sources */,
 				1FDABA7A2D06F95400110EDC /* MapViewController.swift in Sources */,
 				4FBD59E72D07104600807E30 /* RestaurantListController.swift in Sources */,
 				1F38F5FF2D0AB0E700E6D078 /* NetworkService.swift in Sources */,
