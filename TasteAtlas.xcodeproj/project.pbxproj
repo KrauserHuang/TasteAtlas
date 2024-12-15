@@ -38,6 +38,8 @@
 		4F7996C92D0D35BF00ED1312 /* SearchBarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7996C82D0D35BF00ED1312 /* SearchBarButton.swift */; };
 		4F7996CC2D0D38E600ED1312 /* MapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7996CB2D0D38E600ED1312 /* MapController.swift */; };
 		4F7996CE2D0E81EF00ED1312 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7996CD2D0E81EF00ED1312 /* UIColor.swift */; };
+		4F7996D62D0EB1BC00ED1312 /* CombineCompatible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7996D52D0EB1BC00ED1312 /* CombineCompatible.swift */; };
+		4F7996D82D0EB2BA00ED1312 /* UIControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7996D72D0EB2BA00ED1312 /* UIControl.swift */; };
 		4FBD59C72D0689E800807E30 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FBD59B62D0689E800807E30 /* LaunchScreen.storyboard */; };
 		4FBD59C82D0689E800807E30 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FBD59BF2D0689E800807E30 /* Assets.xcassets */; };
 		4FBD59CA2D0689E800807E30 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FBD59B42D0689E800807E30 /* AppDelegate.swift */; };
@@ -107,6 +109,8 @@
 		4F7996C82D0D35BF00ED1312 /* SearchBarButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarButton.swift; sourceTree = "<group>"; };
 		4F7996CB2D0D38E600ED1312 /* MapController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapController.swift; sourceTree = "<group>"; };
 		4F7996CD2D0E81EF00ED1312 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		4F7996D52D0EB1BC00ED1312 /* CombineCompatible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineCompatible.swift; sourceTree = "<group>"; };
+		4F7996D72D0EB2BA00ED1312 /* UIControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIControl.swift; sourceTree = "<group>"; };
 		4FBD59702D05483000807E30 /* TasteAtlas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TasteAtlas.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FBD59892D05483300807E30 /* TasteAtlasTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TasteAtlasTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FBD59932D05483300807E30 /* TasteAtlasUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TasteAtlasUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -405,6 +409,7 @@
 				1F38F6022D0AB83400E6D078 /* Dictionary.swift */,
 				1F38F6042D0AB8CC00E6D078 /* Encodable.swift */,
 				4F7996CD2D0E81EF00ED1312 /* UIColor.swift */,
+				4F7996D72D0EB2BA00ED1312 /* UIControl.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -415,6 +420,7 @@
 				4FBD59BC2D0689E800807E30 /* ReuseIdentifiable.swift */,
 				1F04930F2D08216800C861DD /* ViewModable.swift */,
 				1F0493112D08235900C861DD /* Interactable.swift */,
+				4F7996D52D0EB1BC00ED1312 /* CombineCompatible.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -666,6 +672,7 @@
 			files = (
 				1FDABA762D06F62500110EDC /* MapViewInteractor.swift in Sources */,
 				1F38F6052D0AB8CC00E6D078 /* Encodable.swift in Sources */,
+				4F7996D62D0EB1BC00ED1312 /* CombineCompatible.swift in Sources */,
 				1F1A6EAF2D0947C90033CB71 /* SearchViewInteractor.swift in Sources */,
 				1F04930C2D07F41700C861DD /* SearchController.swift in Sources */,
 				4FBD59CA2D0689E800807E30 /* AppDelegate.swift in Sources */,
@@ -691,6 +698,7 @@
 				1FDABA782D06F63100110EDC /* MapViewRouter.swift in Sources */,
 				1F1A6EB32D0947E70033CB71 /* SearchViewController.swift in Sources */,
 				1F1A6EBA2D0980AD0033CB71 /* NetworkConfig.swift in Sources */,
+				4F7996D82D0EB2BA00ED1312 /* UIControl.swift in Sources */,
 				1F0493042D07DD3F00C861DD /* AccountBuilder.swift in Sources */,
 				1F0493082D07DD5D00C861DD /* AccountRouter.swift in Sources */,
 				4F7996CE2D0E81EF00ED1312 /* UIColor.swift in Sources */,
