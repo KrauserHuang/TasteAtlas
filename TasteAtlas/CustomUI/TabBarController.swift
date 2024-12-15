@@ -15,7 +15,9 @@ class TabBarController: UITabBarController {
     }
     
     private func setupTabbar() {
-        let mapView = MapViewBuilder.build()
+//        let mapView = MapViewBuilder.build()
+//        mapView.tabBarItem = UITabBarItem(title: "Map", image: UIImage(systemName: "map"), tag: 0)
+        let mapView = MapController()
         mapView.tabBarItem = UITabBarItem(title: "Map", image: UIImage(systemName: "map"), tag: 0)
         
         let restaurantListView = RestaurantListBuilder.build()
