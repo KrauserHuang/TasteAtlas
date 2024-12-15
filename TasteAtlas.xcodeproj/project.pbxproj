@@ -18,7 +18,6 @@
 		1F1A6EAD2D0947820033CB71 /* SearchViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F1A6EAC2D0947820033CB71 /* SearchViewBuilder.swift */; };
 		1F1A6EAF2D0947C90033CB71 /* SearchViewInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F1A6EAE2D0947C90033CB71 /* SearchViewInteractor.swift */; };
 		1F1A6EB12D0947D50033CB71 /* SearchViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F1A6EB02D0947D50033CB71 /* SearchViewRouter.swift */; };
-		1F1A6EB32D0947E70033CB71 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F1A6EB22D0947E70033CB71 /* SearchViewController.swift */; };
 		1F1A6EBA2D0980AD0033CB71 /* NetworkConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F1A6EB92D0980AD0033CB71 /* NetworkConfig.swift */; };
 		1F1A6EBC2D09818F0033CB71 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F1A6EBB2D09818F0033CB71 /* HTTPMethod.swift */; };
 		1F1A6EBE2D0981CB0033CB71 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F1A6EBD2D0981CB0033CB71 /* Endpoint.swift */; };
@@ -38,6 +37,7 @@
 		4F7996C92D0D35BF00ED1312 /* SearchBarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7996C82D0D35BF00ED1312 /* SearchBarButton.swift */; };
 		4F7996CC2D0D38E600ED1312 /* MapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7996CB2D0D38E600ED1312 /* MapController.swift */; };
 		4F7996CE2D0E81EF00ED1312 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7996CD2D0E81EF00ED1312 /* UIColor.swift */; };
+		4F7996D42D0EAC8800ED1312 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7996D32D0EAC8800ED1312 /* SearchViewController.swift */; };
 		4F7996D62D0EB1BC00ED1312 /* CombineCompatible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7996D52D0EB1BC00ED1312 /* CombineCompatible.swift */; };
 		4F7996D82D0EB2BA00ED1312 /* UIControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7996D72D0EB2BA00ED1312 /* UIControl.swift */; };
 		4FBD59C72D0689E800807E30 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FBD59B62D0689E800807E30 /* LaunchScreen.storyboard */; };
@@ -89,7 +89,6 @@
 		1F1A6EAC2D0947820033CB71 /* SearchViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewBuilder.swift; sourceTree = "<group>"; };
 		1F1A6EAE2D0947C90033CB71 /* SearchViewInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewInteractor.swift; sourceTree = "<group>"; };
 		1F1A6EB02D0947D50033CB71 /* SearchViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewRouter.swift; sourceTree = "<group>"; };
-		1F1A6EB22D0947E70033CB71 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		1F1A6EB92D0980AD0033CB71 /* NetworkConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConfig.swift; sourceTree = "<group>"; };
 		1F1A6EBB2D09818F0033CB71 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
 		1F1A6EBD2D0981CB0033CB71 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
@@ -109,6 +108,7 @@
 		4F7996C82D0D35BF00ED1312 /* SearchBarButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarButton.swift; sourceTree = "<group>"; };
 		4F7996CB2D0D38E600ED1312 /* MapController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapController.swift; sourceTree = "<group>"; };
 		4F7996CD2D0E81EF00ED1312 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		4F7996D32D0EAC8800ED1312 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		4F7996D52D0EB1BC00ED1312 /* CombineCompatible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineCompatible.swift; sourceTree = "<group>"; };
 		4F7996D72D0EB2BA00ED1312 /* UIControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIControl.swift; sourceTree = "<group>"; };
 		4FBD59702D05483000807E30 /* TasteAtlas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TasteAtlas.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -217,7 +217,6 @@
 		1F1A6EA82D0944DE0033CB71 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				1F1A6EB22D0947E70033CB71 /* SearchViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -357,6 +356,7 @@
 			isa = PBXGroup;
 			children = (
 				4F7996CF2D0EA83000ED1312 /* Map */,
+				4F7996D02D0EA9FE00ED1312 /* Search */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -367,6 +367,14 @@
 				4F7996CB2D0D38E600ED1312 /* MapController.swift */,
 			);
 			path = Map;
+			sourceTree = "<group>";
+		};
+		4F7996D02D0EA9FE00ED1312 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				4F7996D32D0EAC8800ED1312 /* SearchViewController.swift */,
+			);
+			path = Search;
 			sourceTree = "<group>";
 		};
 		4FBD59672D05483000807E30 = {
@@ -696,7 +704,6 @@
 				4FBD59E92D08799700807E30 /* MapView.swift in Sources */,
 				1F1A6EBE2D0981CB0033CB71 /* Endpoint.swift in Sources */,
 				1FDABA782D06F63100110EDC /* MapViewRouter.swift in Sources */,
-				1F1A6EB32D0947E70033CB71 /* SearchViewController.swift in Sources */,
 				1F1A6EBA2D0980AD0033CB71 /* NetworkConfig.swift in Sources */,
 				4F7996D82D0EB2BA00ED1312 /* UIControl.swift in Sources */,
 				1F0493042D07DD3F00C861DD /* AccountBuilder.swift in Sources */,
@@ -707,6 +714,7 @@
 				1F0493122D08235A00C861DD /* Interactable.swift in Sources */,
 				1FDABA5F2D06D11300110EDC /* UITableView.swift in Sources */,
 				4FBD59CF2D0689E800807E30 /* TasteAtlas.xcdatamodeld in Sources */,
+				4F7996D42D0EAC8800ED1312 /* SearchViewController.swift in Sources */,
 				4FBD59E12D070FFD00807E30 /* RestaurantListBuilder.swift in Sources */,
 				4FBD59D02D0689E800807E30 /* ViewController.swift in Sources */,
 				1FDABA672D06DCF900110EDC /* PresentableView.swift in Sources */,

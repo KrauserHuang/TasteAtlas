@@ -20,7 +20,7 @@ class SearchController: UISearchController {
         searchBar.searchTextField.backgroundColor = .darkGray
         searchBar.searchTextField.textColor = .white
         obscuresBackgroundDuringPresentation = false
-//        searchBar.searchTextField.font = .systemFont(ofSize: 14)
+        searchBar.searchTextField.font = .systemFont(ofSize: 14)
         searchBar.searchBarStyle = .prominent
         searchBar.tintColor = .black
 //        searchBar.barTintColor = .black
