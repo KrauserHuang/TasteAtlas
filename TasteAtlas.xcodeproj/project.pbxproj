@@ -45,6 +45,7 @@
 		4F0886C72D1452DF000F3E4B /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 4F0886C62D1452DF000F3E4B /* GoogleSignIn */; };
 		4F0886C92D1452DF000F3E4B /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 4F0886C82D1452DF000F3E4B /* GoogleSignInSwift */; };
 		4F0886CD2D14555E000F3E4B /* Google Service Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4F0886CC2D14555E000F3E4B /* Google Service Info.plist */; };
+		4F0886D02D1459DB000F3E4B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F0886CF2D1459DB000F3E4B /* LoginViewController.swift */; };
 		4F7996C92D0D35BF00ED1312 /* SearchBarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7996C82D0D35BF00ED1312 /* SearchBarButton.swift */; };
 		4F7996CC2D0D38E600ED1312 /* MapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7996CB2D0D38E600ED1312 /* MapController.swift */; };
 		4F7996CE2D0E81EF00ED1312 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7996CD2D0E81EF00ED1312 /* UIColor.swift */; };
@@ -117,6 +118,7 @@
 		1FDABA772D06F63100110EDC /* MapViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewRouter.swift; sourceTree = "<group>"; };
 		1FDABA792D06F95400110EDC /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		4F0886CC2D14555E000F3E4B /* Google Service Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Google Service Info.plist"; sourceTree = "<group>"; };
+		4F0886CF2D1459DB000F3E4B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		4F7996C82D0D35BF00ED1312 /* SearchBarButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarButton.swift; sourceTree = "<group>"; };
 		4F7996CB2D0D38E600ED1312 /* MapController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapController.swift; sourceTree = "<group>"; };
 		4F7996CD2D0E81EF00ED1312 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
@@ -374,9 +376,18 @@
 			path = Builder;
 			sourceTree = "<group>";
 		};
+		4F0886CE2D14598C000F3E4B /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				4F0886CF2D1459DB000F3E4B /* LoginViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
 		4F7996CA2D0D37EF00ED1312 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				4F0886CE2D14598C000F3E4B /* Login */,
 				4F7996CF2D0EA83000ED1312 /* Map */,
 				4F7996D02D0EA9FE00ED1312 /* Search */,
 			);
@@ -756,6 +767,7 @@
 				4FBD59E12D070FFD00807E30 /* RestaurantListBuilder.swift in Sources */,
 				4FBD59D02D0689E800807E30 /* ViewController.swift in Sources */,
 				1FDABA672D06DCF900110EDC /* PresentableView.swift in Sources */,
+				4F0886D02D1459DB000F3E4B /* LoginViewController.swift in Sources */,
 				1F1A6EBC2D09818F0033CB71 /* HTTPMethod.swift in Sources */,
 				4F7996C92D0D35BF00ED1312 /* SearchBarButton.swift in Sources */,
 				1FDABA7A2D06F95400110EDC /* MapViewController.swift in Sources */,
