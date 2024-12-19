@@ -7,6 +7,9 @@
 
 import UIKit
 import CoreData
+import FirebaseAuth
+import FirebaseCore
+import GoogleSignIn
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,6 +19,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         setTabBarAppearance()
+        configureFirebase()
+        
         return true
     }
 
@@ -88,5 +93,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         appearance.backgroundColor = .darkGrey
         UITabBar.appearance().scrollEdgeAppearance = appearance
         UITabBar.appearance().standardAppearance = appearance
+    }
+    
+    // MARK: - Firebase
+    private func configureFirebase() {
+        FirebaseApp.configure()
+    }
+    
+    // 處理外部連結(maybe at the end of authentication process)
+    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
+        return GIDSignIn.sharedInstance.handle(url)
     }
 }
