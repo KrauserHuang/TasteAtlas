@@ -46,6 +46,7 @@
 		4F0886C92D1452DF000F3E4B /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 4F0886C82D1452DF000F3E4B /* GoogleSignInSwift */; };
 		4F0886CD2D14555E000F3E4B /* Google Service Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4F0886CC2D14555E000F3E4B /* Google Service Info.plist */; };
 		4F0886D02D1459DB000F3E4B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F0886CF2D1459DB000F3E4B /* LoginViewController.swift */; };
+		4F0886D22D14CD88000F3E4B /* LoginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F0886D12D14CD88000F3E4B /* LoginButton.swift */; };
 		4F7996C92D0D35BF00ED1312 /* SearchBarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7996C82D0D35BF00ED1312 /* SearchBarButton.swift */; };
 		4F7996CC2D0D38E600ED1312 /* MapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7996CB2D0D38E600ED1312 /* MapController.swift */; };
 		4F7996CE2D0E81EF00ED1312 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7996CD2D0E81EF00ED1312 /* UIColor.swift */; };
@@ -119,6 +120,7 @@
 		1FDABA792D06F95400110EDC /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		4F0886CC2D14555E000F3E4B /* Google Service Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Google Service Info.plist"; sourceTree = "<group>"; };
 		4F0886CF2D1459DB000F3E4B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		4F0886D12D14CD88000F3E4B /* LoginButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginButton.swift; sourceTree = "<group>"; };
 		4F7996C82D0D35BF00ED1312 /* SearchBarButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarButton.swift; sourceTree = "<group>"; };
 		4F7996CB2D0D38E600ED1312 /* MapController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapController.swift; sourceTree = "<group>"; };
 		4F7996CD2D0E81EF00ED1312 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
@@ -319,6 +321,7 @@
 				1F04930D2D07F7E500C861DD /* SpinnerFooterView.swift */,
 				4FBD59C42D0689E800807E30 /* ViewController.swift */,
 				4F7996C82D0D35BF00ED1312 /* SearchBarButton.swift */,
+				4F0886D12D14CD88000F3E4B /* LoginButton.swift */,
 			);
 			path = CustomUI;
 			sourceTree = "<group>";
@@ -728,6 +731,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1FDABA762D06F62500110EDC /* MapViewInteractor.swift in Sources */,
+				4F0886D22D14CD88000F3E4B /* LoginButton.swift in Sources */,
 				1F38F6052D0AB8CC00E6D078 /* Encodable.swift in Sources */,
 				4F7996D62D0EB1BC00ED1312 /* CombineCompatible.swift in Sources */,
 				1F1A6EAF2D0947C90033CB71 /* SearchViewInteractor.swift in Sources */,

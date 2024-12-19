@@ -14,6 +14,7 @@ extension UIColor {
     static let secondaryDarkGreen = UIColor(hex: "3C3D37")
     static let primaryGreen = UIColor(hex: "697565")
     static let primaryEarth = UIColor(hex: "ECDFCC")
+    static let signInButtonGray = UIColor(hex: "EFEFEF")
     
     convenience init(hex: String, alpha: CGFloat = 1.0) {
         let scanner = Scanner(string: hex)
