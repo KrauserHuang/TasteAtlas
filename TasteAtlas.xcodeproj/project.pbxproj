@@ -24,6 +24,7 @@
 		1F32EFBC2D150C4700C52FF0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1F32EFBB2D150C4700C52FF0 /* GoogleService-Info.plist */; };
 		1F32EFBE2D1511AF00C52FF0 /* UIStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F32EFBD2D1511AF00C52FF0 /* UIStackView.swift */; };
 		1F32EFC02D15150E00C52FF0 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F32EFBF2D15150E00C52FF0 /* UIImage.swift */; };
+		1F32EFC62D15788800C52FF0 /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F32EFC52D15788800C52FF0 /* AuthenticationViewModel.swift */; };
 		1F38F5FF2D0AB0E700E6D078 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F38F5FE2D0AB0E700E6D078 /* NetworkService.swift */; };
 		1F38F6012D0AB4EA00E6D078 /* DataTransferService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F38F6002D0AB4EA00E6D078 /* DataTransferService.swift */; };
 		1F38F6032D0AB83400E6D078 /* Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F38F6022D0AB83400E6D078 /* Dictionary.swift */; };
@@ -110,6 +111,7 @@
 		1F32EFBB2D150C4700C52FF0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		1F32EFBD2D1511AF00C52FF0 /* UIStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStackView.swift; sourceTree = "<group>"; };
 		1F32EFBF2D15150E00C52FF0 /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
+		1F32EFC52D15788800C52FF0 /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
 		1F38F5FE2D0AB0E700E6D078 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		1F38F6002D0AB4EA00E6D078 /* DataTransferService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTransferService.swift; sourceTree = "<group>"; };
 		1F38F6022D0AB83400E6D078 /* Dictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dictionary.swift; sourceTree = "<group>"; };
@@ -316,6 +318,14 @@
 			path = Network;
 			sourceTree = "<group>";
 		};
+		1F32EFC42D15787600C52FF0 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				1F32EFC52D15788800C52FF0 /* AuthenticationViewModel.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
 		1FDABA622D06DBE600110EDC /* CustomUI */ = {
 			isa = PBXGroup;
 			children = (
@@ -507,6 +517,7 @@
 		4FBD59C52D0689E800807E30 /* TasteAtlas */ = {
 			isa = PBXGroup;
 			children = (
+				1F32EFC42D15787600C52FF0 /* Auth */,
 				4FBD59B82D0689E800807E30 /* Application */,
 				1F1A6EB42D0975A00033CB71 /* Presentation */,
 				1F1A6EB52D0980490033CB71 /* Domain */,
@@ -772,6 +783,7 @@
 				4F7996CE2D0E81EF00ED1312 /* UIColor.swift in Sources */,
 				1F0493062D07DD5000C861DD /* AccountInteractor.swift in Sources */,
 				4FBD59E32D07101400807E30 /* RestaurantListInteractor.swift in Sources */,
+				1F32EFC62D15788800C52FF0 /* AuthenticationViewModel.swift in Sources */,
 				1F0493122D08235A00C861DD /* Interactable.swift in Sources */,
 				1FDABA5F2D06D11300110EDC /* UITableView.swift in Sources */,
 				4FBD59CF2D0689E800807E30 /* TasteAtlas.xcdatamodeld in Sources */,
