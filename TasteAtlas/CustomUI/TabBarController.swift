@@ -23,7 +23,9 @@ class TabBarController: UITabBarController {
         let restaurantListView = RestaurantListBuilder.build()
         restaurantListView.tabBarItem = UITabBarItem(title: "List", image: UIImage(systemName: "list.bullet"), tag: 1)
         
-        let accountView = AccountBuilder.build()
+//        let accountView = AccountBuilder.build()
+//        accountView.tabBarItem = UITabBarItem(title: "Account", image: UIImage(systemName: "person.crop.circle"), tag: 2)
+        let accountView = LoginViewController()
         accountView.tabBarItem = UITabBarItem(title: "Account", image: UIImage(systemName: "person.crop.circle"), tag: 2)
         
         setViewControllers([mapView, restaurantListView, accountView], animated: false)

@@ -15,12 +15,10 @@ final class MapController: UIViewController {
     private let searchBarButton = SearchBarButton()
     private lazy var mapView: MKMapView = {
         let mapView = MKMapView(useAutoLayout: true)
-        mapView.overrideUserInterfaceStyle = .dark
+//        mapView.overrideUserInterfaceStyle = .dark
         mapView.showsUserLocation = true
         return mapView
     }()
-    
-    private let signInWithAppleButton = LoginButton(entry: .apple)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,7 +31,6 @@ final class MapController: UIViewController {
     private func setupUI() {
         view.addSubview(mapView)
         view.addSubview(searchBarButton)
-        view.addSubview(signInWithAppleButton)
     }
     
     private func setupConstraints() {
@@ -44,11 +41,6 @@ final class MapController: UIViewController {
             searchBarButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: padding * 2),
             searchBarButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -padding * 2),
             searchBarButton.heightAnchor.constraint(equalToConstant: 40),
-            
-            signInWithAppleButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -padding),
-            signInWithAppleButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: padding * 2),
-            signInWithAppleButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -padding * 2),
-            signInWithAppleButton.heightAnchor.constraint(equalToConstant: 40),
         ])
     }
 }
