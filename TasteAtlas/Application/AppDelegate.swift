@@ -97,7 +97,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     // MARK: - Firebase
     private func configureFirebase() {
-//        FirebaseApp.configure()
+        FirebaseApp.configure()
     }
     
     // 處理外部連結(maybe at the end of authentication process)
