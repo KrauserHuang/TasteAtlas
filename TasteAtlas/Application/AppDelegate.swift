@@ -98,6 +98,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // MARK: - Firebase
     private func configureFirebase() {
         FirebaseApp.configure()
+        
+        Auth.auth().useEmulator(withHost: "localhost", port: 9099)
     }
     
     // 處理外部連結(maybe at the end of authentication process)
