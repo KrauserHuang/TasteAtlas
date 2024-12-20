@@ -30,9 +30,9 @@ class LoginButton: UIButton {
             case .apple:
                 return UIImage(systemName: "applelogo")!
             case .facebook:
-                return UIImage(named: "facebook") ?? UIImage(systemName: "applelogo")!
+                return UIImage(named: "facebooklogo") ?? UIImage(systemName: "applelogo")!
             case .google:
-                return UIImage(named: "google") ?? UIImage(systemName: "applelogo")!
+                return UIImage(named: "googlelogo") ?? UIImage(systemName: "applelogo")!
             }
         }
     }
@@ -55,7 +55,7 @@ class LoginButton: UIButton {
         var configuration = UIButton.Configuration.filled()
         configuration.title = entry.title
         configuration.image = entry.image
-        configuration.imagePadding = 5
+        configuration.imagePadding = 10
         configuration.imagePlacement = .leading
         configuration.baseForegroundColor = .label
         configuration.background.backgroundColor = .signInButtonGray
