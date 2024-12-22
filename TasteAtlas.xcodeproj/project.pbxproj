@@ -277,27 +277,6 @@
 			path = Builder;
 			sourceTree = "<group>";
 		};
-		1F1A6EB42D0975A00033CB71 /* Presentation */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Presentation;
-			sourceTree = "<group>";
-		};
-		1F1A6EB52D0980490033CB71 /* Domain */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Domain;
-			sourceTree = "<group>";
-		};
-		1F1A6EB62D0980510033CB71 /* Data */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Data;
-			sourceTree = "<group>";
-		};
 		1F1A6EB72D09806D0033CB71 /* Infrastructure */ = {
 			isa = PBXGroup;
 			children = (
@@ -519,9 +498,6 @@
 			children = (
 				1F32EFC42D15787600C52FF0 /* Auth */,
 				4FBD59B82D0689E800807E30 /* Application */,
-				1F1A6EB42D0975A00033CB71 /* Presentation */,
-				1F1A6EB52D0980490033CB71 /* Domain */,
-				1F1A6EB62D0980510033CB71 /* Data */,
 				1F1A6EB72D09806D0033CB71 /* Infrastructure */,
 				4F7996CA2D0D37EF00ED1312 /* Screens */,
 				4FBD59C12D0689E800807E30 /* Views */,
