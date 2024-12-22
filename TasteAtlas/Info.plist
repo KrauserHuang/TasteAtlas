@@ -12,7 +12,19 @@
 				<string>com.googleusercontent.apps.739965046802-dv8nll0r835t9pvtn6q6qe8kgld747h6</string>
 			</array>
 		</dict>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>fb1104206781255833</string>
+			</array>
+		</dict>
 	</array>
+	<key>FacebookAppID</key>
+	<string>1104206781255833</string>
+	<key>FacebookDisplayName</key>
+	<string>TasteAtlas</string>
 	<key>GIDClientID</key>
 	<string>739965046802-dv8nll0r835t9pvtn6q6qe8kgld747h6.apps.googleusercontent.com</string>
 	<key>UIApplicationSceneManifest</key>
