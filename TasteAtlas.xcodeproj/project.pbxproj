@@ -376,42 +376,6 @@
 			path = Builder;
 			sourceTree = "<group>";
 		};
-		4F0886CE2D14598C000F3E4B /* Login */ = {
-			isa = PBXGroup;
-			children = (
-				4F0886CF2D1459DB000F3E4B /* LoginViewController.swift */,
-			);
-			path = Login;
-			sourceTree = "<group>";
-		};
-		4F7996CA2D0D37EF00ED1312 /* Screens */ = {
-			isa = PBXGroup;
-			children = (
-				4FF4C2922D17B47C00F6B8EF /* UserProfile */,
-				4FDE9ED82D16BC01006C130F /* Member */,
-				4F0886CE2D14598C000F3E4B /* Login */,
-				4F7996CF2D0EA83000ED1312 /* Map */,
-				4F7996D02D0EA9FE00ED1312 /* Search */,
-			);
-			path = Screens;
-			sourceTree = "<group>";
-		};
-		4F7996CF2D0EA83000ED1312 /* Map */ = {
-			isa = PBXGroup;
-			children = (
-				4F7996CB2D0D38E600ED1312 /* MapController.swift */,
-			);
-			path = Map;
-			sourceTree = "<group>";
-		};
-		4F7996D02D0EA9FE00ED1312 /* Search */ = {
-			isa = PBXGroup;
-			children = (
-				4F7996D32D0EAC8800ED1312 /* SearchViewController.swift */,
-			);
-			path = Search;
-			sourceTree = "<group>";
-		};
 		4FBD59672D05483000807E30 = {
 			isa = PBXGroup;
 			children = (
@@ -502,10 +466,10 @@
 		4FBD59C52D0689E800807E30 /* TasteAtlas */ = {
 			isa = PBXGroup;
 			children = (
+				4FF4C2952D17BDF700F6B8EF /* Presentation */,
 				1F32EFC42D15787600C52FF0 /* Auth */,
 				4FBD59B82D0689E800807E30 /* Application */,
 				1F1A6EB72D09806D0033CB71 /* Infrastructure */,
-				4F7996CA2D0D37EF00ED1312 /* Screens */,
 				4FBD59C12D0689E800807E30 /* Views */,
 				4FBD59BE2D0689E800807E30 /* Miscellaneous */,
 				1FDABA622D06DBE600110EDC /* CustomUI */,
@@ -577,20 +541,56 @@
 			path = Router;
 			sourceTree = "<group>";
 		};
-		4FDE9ED82D16BC01006C130F /* Member */ = {
+		4FF4C2952D17BDF700F6B8EF /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				4FF4C2962D17BE0100F6B8EF /* MapScene */,
+				4FF4C29A2D17BFED00F6B8EF /* SearchScene */,
+				4FF4C2972D17BE0E00F6B8EF /* MemberScene */,
+				4FF4C2982D17BE1800F6B8EF /* LoginScene */,
+				4FF4C2992D17BE1E00F6B8EF /* UserProfileScene */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		4FF4C2962D17BE0100F6B8EF /* MapScene */ = {
+			isa = PBXGroup;
+			children = (
+				4F7996CB2D0D38E600ED1312 /* MapController.swift */,
+			);
+			path = MapScene;
+			sourceTree = "<group>";
+		};
+		4FF4C2972D17BE0E00F6B8EF /* MemberScene */ = {
 			isa = PBXGroup;
 			children = (
 				4FDE9ED92D16BC18006C130F /* MemberViewController.swift */,
 			);
-			path = Member;
+			path = MemberScene;
 			sourceTree = "<group>";
 		};
-		4FF4C2922D17B47C00F6B8EF /* UserProfile */ = {
+		4FF4C2982D17BE1800F6B8EF /* LoginScene */ = {
+			isa = PBXGroup;
+			children = (
+				4F0886CF2D1459DB000F3E4B /* LoginViewController.swift */,
+			);
+			path = LoginScene;
+			sourceTree = "<group>";
+		};
+		4FF4C2992D17BE1E00F6B8EF /* UserProfileScene */ = {
 			isa = PBXGroup;
 			children = (
 				4FF4C2932D17B8E500F6B8EF /* UserProfileViewController.swift */,
 			);
-			path = UserProfile;
+			path = UserProfileScene;
+			sourceTree = "<group>";
+		};
+		4FF4C29A2D17BFED00F6B8EF /* SearchScene */ = {
+			isa = PBXGroup;
+			children = (
+				4F7996D32D0EAC8800ED1312 /* SearchViewController.swift */,
+			);
+			path = SearchScene;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
