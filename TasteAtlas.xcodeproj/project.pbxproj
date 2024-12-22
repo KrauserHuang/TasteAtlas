@@ -74,6 +74,8 @@
 		4FBD59E72D07104600807E30 /* RestaurantListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FBD59E62D07104600807E30 /* RestaurantListController.swift */; };
 		4FBD59E92D08799700807E30 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FBD59E82D08799700807E30 /* MapView.swift */; };
 		4FBD59EB2D08F1C400807E30 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FBD59EA2D08F1C400807E30 /* MapViewModel.swift */; };
+		4FDE9EDA2D16BC18006C130F /* MemberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FDE9ED92D16BC18006C130F /* MemberViewController.swift */; };
+		4FF4C2942D17B8E500F6B8EF /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF4C2932D17B8E500F6B8EF /* UserProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -155,6 +157,8 @@
 		4FBD59E62D07104600807E30 /* RestaurantListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantListController.swift; sourceTree = "<group>"; };
 		4FBD59E82D08799700807E30 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		4FBD59EA2D08F1C400807E30 /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
+		4FDE9ED92D16BC18006C130F /* MemberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberViewController.swift; sourceTree = "<group>"; };
+		4FF4C2932D17B8E500F6B8EF /* UserProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -383,6 +387,8 @@
 		4F7996CA2D0D37EF00ED1312 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				4FF4C2922D17B47C00F6B8EF /* UserProfile */,
+				4FDE9ED82D16BC01006C130F /* Member */,
 				4F0886CE2D14598C000F3E4B /* Login */,
 				4F7996CF2D0EA83000ED1312 /* Map */,
 				4F7996D02D0EA9FE00ED1312 /* Search */,
@@ -571,6 +577,22 @@
 			path = Router;
 			sourceTree = "<group>";
 		};
+		4FDE9ED82D16BC01006C130F /* Member */ = {
+			isa = PBXGroup;
+			children = (
+				4FDE9ED92D16BC18006C130F /* MemberViewController.swift */,
+			);
+			path = Member;
+			sourceTree = "<group>";
+		};
+		4FF4C2922D17B47C00F6B8EF /* UserProfile */ = {
+			isa = PBXGroup;
+			children = (
+				4FF4C2932D17B8E500F6B8EF /* UserProfileViewController.swift */,
+			);
+			path = UserProfile;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -729,12 +751,14 @@
 				1F38F6052D0AB8CC00E6D078 /* Encodable.swift in Sources */,
 				4F7996D62D0EB1BC00ED1312 /* CombineCompatible.swift in Sources */,
 				1F1A6EAF2D0947C90033CB71 /* SearchViewInteractor.swift in Sources */,
+				4FF4C2942D17B8E500F6B8EF /* UserProfileViewController.swift in Sources */,
 				1F04930C2D07F41700C861DD /* SearchController.swift in Sources */,
 				4FBD59CA2D0689E800807E30 /* AppDelegate.swift in Sources */,
 				1F38F6012D0AB4EA00E6D078 /* DataTransferService.swift in Sources */,
 				4FBD59CB2D0689E800807E30 /* SceneDelegate.swift in Sources */,
 				1F0493102D08216800C861DD /* ViewModable.swift in Sources */,
 				1F04930A2D07DD7800C861DD /* AccountController.swift in Sources */,
+				4FDE9EDA2D16BC18006C130F /* MemberViewController.swift in Sources */,
 				1F38F6032D0AB83400E6D078 /* Dictionary.swift in Sources */,
 				4FBD59CC2D0689E800807E30 /* UICollectionView.swift in Sources */,
 				1FDABA742D06F61800110EDC /* MapViewBuilder.swift in Sources */,
