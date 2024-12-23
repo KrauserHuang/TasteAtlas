@@ -26,10 +26,10 @@ class TabBarController: UITabBarController {
 //        let accountView = AccountBuilder.build()
 //        accountView.tabBarItem = UITabBarItem(title: "Account", image: UIImage(systemName: "person.crop.circle"), tag: 2)
         let memberView = MemberViewController()
-        memberView.navigationItem.largeTitleDisplayMode = .always
+//        memberView.navigationItem.largeTitleDisplayMode = .always
         let nav3 = UINavigationController(rootViewController: memberView)
         nav3.tabBarItem = UITabBarItem(title: "Account", image: UIImage(systemName: "person.crop.circle"), tag: 2)
-        nav3.navigationBar.prefersLargeTitles = true
+//        nav3.navigationBar.prefersLargeTitles = true
         
         setViewControllers([mapView, restaurantListView, nav3], animated: false)
     }
