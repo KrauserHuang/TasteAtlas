@@ -11,6 +11,15 @@ import UIKit
 
 class MemberViewController: UIViewController {
     
+    private lazy var photoImageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.contentMode = .scaleAspectFill
+        imageView.layer.cornerRadius = 50
+        imageView.layer.masksToBounds = true
+        return imageView
+    }()
+    
     private let viewModel = AuthenticationViewModel()
     private var subscriptions: Set<AnyCancellable> = []
     
@@ -25,6 +34,7 @@ class MemberViewController: UIViewController {
     // MARK: - Setup UI
     private func setupUI() {
         viewModel.$user
+            .receive(on: DispatchQueue.main)
             .sink { [weak self] user in
                 guard let self else { return }
                 self.user = user
