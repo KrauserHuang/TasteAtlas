@@ -5,6 +5,7 @@
 //  Created by Tai Chin Huang on 2024/12/8.
 //
 
+import FacebookCore
 import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
@@ -56,6 +57,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         (UIApplication.shared.delegate as? AppDelegate)?.saveContext()
     }
 
-
+    func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>) {
+        guard let url = URLContexts.first?.url else {
+            return
+        }
+    }
 }
 

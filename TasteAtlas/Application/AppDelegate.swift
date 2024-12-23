@@ -7,6 +7,7 @@
 
 import UIKit
 import CoreData
+import FacebookCore
 import FirebaseAuth
 import FirebaseCore
 import GoogleSignIn
@@ -20,6 +21,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         setTabBarAppearance()
         configureFirebase()
+        
+        // Initialize Facebook SDK
+        ApplicationDelegate.shared.application(
+            application,
+            didFinishLaunchingWithOptions: launchOptions
+        )
         
         return true
     }
@@ -105,5 +112,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // 處理外部連結(maybe at the end of authentication process)
     func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
         return GIDSignIn.sharedInstance.handle(url)
+//        return ApplicationDelegate.shared.application(
+//            app,
+//            open: url,
+//            sourceApplication: options[UIApplication.OpenURLOptionsKey.sourceApplication] as? String,
+//            annotation: options[UIApplication.OpenURLOptionsKey.annotation]
+//        )
     }
 }

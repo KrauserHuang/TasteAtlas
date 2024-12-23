@@ -6,6 +6,8 @@
 //
 
 import Foundation
+import FacebookCore
+import FacebookLogin
 import FirebaseCore
 import FirebaseAuth
 import GoogleSignIn
@@ -35,6 +37,8 @@ class AuthenticationViewModel: ObservableObject {
     @Published var errorMessage: String = ""
     @Published var user: User?
     @Published var displayName: String = ""
+    
+    private let readPermissions: [String] = ["public_profile", "email"]
     
     init() {
         registerAuthStateHandler()
@@ -134,6 +138,7 @@ enum AuthenticationError: Error {
     case tokenError(message: String)
 }
 
+// MARK: - Google Sign In
 extension AuthenticationViewModel {
     func signInWithGoogle() async -> Bool {
         /// 可以直接從 FirebaseApp.app()?.options.clientID 取得 clientID(App init時就會設定)
@@ -167,6 +172,15 @@ extension AuthenticationViewModel {
             /// 使用憑證進行 Firebase 登入
             let result = try await Auth.auth().signIn(with: credential)
             
+            let currentUser = Auth.auth().currentUser
+            currentUser?.getIDTokenForcingRefresh(true) { idToken, error in
+                if let error = error {
+                    print(error.localizedDescription)
+                    return
+                }
+                print("ID Token \(idToken ?? "")")
+            }
+            
             /// 取得 Firebase 使用者
             let firebaseUser = result.user
             print("username \(firebaseUser.displayName ?? "Unknown")")
@@ -178,4 +192,32 @@ extension AuthenticationViewModel {
             return false
         }
     }
+}
+
+// MARK: - Facebook Sign In
+extension AuthenticationViewModel {
+//    func signInWithFacebook() async -> Bool {
+//        authenticationState = .authenticating
+//        
+//        guard let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
+//              let window = windowScene.windows.first,
+//              let rootViewController = window.rootViewController else {
+//            print("There is no root view controller!")
+//            return false
+//        }
+//        
+//        let manager = LoginManager()
+////        manager.logIn(permissions: readPermissions, from: rootViewController) { loginResult, error in
+////            switch loginResult {
+////            case .success:
+////                break
+////            case .failed(_):
+////                break
+////            }
+////        }
+////        let result = await withCheckedContinuation { continuation in
+////            manager.logIn(permissions: ["public_profile", "email"], from: rootViewController) { loginResult, error in
+////
+////        }
+//    }
 }

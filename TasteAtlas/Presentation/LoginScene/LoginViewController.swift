@@ -6,6 +6,7 @@
 //
 
 import Combine
+import FacebookLogin
 import FirebaseAuth
 import GoogleSignIn
 import GoogleSignInSwift
@@ -16,12 +17,14 @@ import AuthenticationServices
 class LoginViewController: UIViewController {
     
     private let signInWithApple = ASAuthorizationAppleIDButton()
+    private let signInWithFacebook = FBLoginButton(useAutoLayout: true)
     private let signInWithAppleButton = LoginButton(entry: .apple)
     private let signInWithFacebookButton = LoginButton(entry: .facebook)
     private let signInWithGoogleButton = LoginButton(entry: .google)
     private lazy var signInButtonVStackView = UIStackView(
         arrangedSubviews: [
             signInWithApple,
+//            signInWithFacebook,
             signInWithAppleButton,
             signInWithFacebookButton,
             signInWithGoogleButton
@@ -43,17 +46,20 @@ class LoginViewController: UIViewController {
     
     private func setupUI() {
         view.addSubview(signInButtonVStackView)
+        signInWithFacebook.delegate = self
         
         let padding: CGFloat = 10
         NSLayoutConstraint.activate([
-            signInButtonVStackView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -padding),
-            signInButtonVStackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: padding * 2),
-            signInButtonVStackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -padding * 2),
+            signInButtonVStackView.centerYAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerYAnchor),
+            signInButtonVStackView.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor),
+            signInButtonVStackView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: padding * 2),
+            signInButtonVStackView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -padding * 2),
             
             signInWithAppleButton.heightAnchor.constraint(equalToConstant: 50),
             signInWithFacebookButton.heightAnchor.constraint(equalTo: signInWithAppleButton.heightAnchor),
             signInWithGoogleButton.heightAnchor.constraint(equalTo: signInWithAppleButton.heightAnchor),
-            signInWithApple.heightAnchor.constraint(equalTo: signInWithAppleButton.heightAnchor)
+            signInWithApple.heightAnchor.constraint(equalTo: signInWithAppleButton.heightAnchor),
+//            signInWithFacebook.heightAnchor.constraint(equalTo: signInWithAppleButton.heightAnchor)
         ])
     }
     
@@ -90,5 +96,15 @@ class LoginViewController: UIViewController {
                 }
             }
             .store(in: &subscriptions)
+    }
+}
+
+extension LoginViewController: LoginButtonDelegate {
+    func loginButton(_ loginButton: FBSDKLoginKit.FBLoginButton, didCompleteWith result: FBSDKLoginKit.LoginManagerLoginResult?, error: (any Error)?) {
+        let credential = FacebookAuthProvider.credential(withAccessToken: AccessToken.current!.tokenString)
+    }
+    
+    func loginButtonDidLogOut(_ loginButton: FBSDKLoginKit.FBLoginButton) {
+        viewModel.signOut()
     }
 }
