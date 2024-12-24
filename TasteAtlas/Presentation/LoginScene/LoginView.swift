@@ -50,27 +50,14 @@ struct LoginView: View {
                 .fontWeight(.bold)
                 .frame(maxWidth: .infinity, alignment: .leading)
             
-//            SignInWithAppleButton { request in
-//                request.requestedScopes = [.fullName, .email]
-//            } onCompletion: { result in
-//                switch result {
-//                case .success(let authorization):
-//                    // Handle successful authorization
-//                    if let appleIDCredential = authorization.credential as? ASAuthorizationAppleIDCredential {
-//                        // Use appleIDCredential to sign in
-//                        // For example, send it to your backend for verification
-//                        print("User ID: \(appleIDCredential.user)")
-//                        print("Full Name: \(String(describing: appleIDCredential.fullName))")
-//                        print("Email: \(String(describing: appleIDCredential.email))")
-//                    }
-//                case .failure(let error):
-//                    // Handle error
-//                    print("Error signing in with Apple: \(error)")
-//                }
-//            }
-//            .frame(height: 44)
-//            .signInWithAppleButtonStyle(colorScheme == .dark ? .white : .black)
-//            .padding(.top, 20)
+            SignInWithAppleButton(.signIn) { request in
+                viewModel.handleSignInWithAppleRequest(request)
+            } onCompletion: { result in
+                viewModel.handleSignInWithAppleCompletion(result)
+            }
+            .signInWithAppleButtonStyle(colorScheme == .dark ? .white : .black)
+            .frame(maxWidth: .infinity, maxHeight: 50)
+            .cornerRadius(8)
             
             Button(action: signInWithApple) {
                 HStack {
