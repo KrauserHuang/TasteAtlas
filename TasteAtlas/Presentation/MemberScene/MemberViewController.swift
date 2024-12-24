@@ -55,7 +55,8 @@ class MemberViewController: UIViewController {
             let vc = UserProfileViewController()
             navigationController?.pushViewController(vc, animated: true)
         } else {
-            let vc = LoginViewController()
+//            let vc = LoginViewController()
+            let vc = ReLoginViewController()
             present(vc, animated: true)
         }
     }

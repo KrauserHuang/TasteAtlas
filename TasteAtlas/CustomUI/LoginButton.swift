@@ -44,7 +44,6 @@ class LoginButton: UIButton {
         super.init(frame: .zero)
         
         configure()
-        self.translatesAutoresizingMaskIntoConstraints = false
     }
     
     required init?(coder: NSCoder) {
@@ -54,11 +53,17 @@ class LoginButton: UIButton {
     private func configure() {
         var configuration = UIButton.Configuration.filled()
         configuration.title = entry.title
-        configuration.image = entry.image
+        configuration.image = entry.image.scalePreservingAspectRatio(targetSize: CGSize(width: 25, height: 25))
         configuration.imagePadding = 10
         configuration.imagePlacement = .leading
         configuration.baseForegroundColor = .label
         configuration.background.backgroundColor = .signInButtonGray
+        configuration.titleTextAttributesTransformer = UIConfigurationTextAttributesTransformer { incoming in
+            var outgoing = incoming
+            outgoing.font = UIFont.systemFont(ofSize: 18, weight: .medium)
+            return outgoing
+        }
         self.configuration = configuration
+        self.translatesAutoresizingMaskIntoConstraints = false
     }
 }

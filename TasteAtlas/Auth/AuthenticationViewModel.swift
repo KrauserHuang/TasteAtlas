@@ -196,28 +196,35 @@ extension AuthenticationViewModel {
 
 // MARK: - Facebook Sign In
 extension AuthenticationViewModel {
-//    func signInWithFacebook() async -> Bool {
-//        authenticationState = .authenticating
-//        
-//        guard let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
-//              let window = windowScene.windows.first,
-//              let rootViewController = window.rootViewController else {
-//            print("There is no root view controller!")
-//            return false
+    func signInWithFacebook() async -> Bool {
+        authenticationState = .authenticating
+        
+        guard let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
+              let window = windowScene.windows.first,
+              let rootViewController = window.rootViewController else {
+            print("There is no root view controller!")
+            return false
+        }
+        
+        let manager = LoginManager()
+        return false
+//        manager.logIn(permissions: readPermissions, from: rootViewController) { loginResult, error in
+//            switch loginResult {
+//            case .success:
+//                break
+//            case .failed(_):
+//                break
+//            }
 //        }
-//        
-//        let manager = LoginManager()
-////        manager.logIn(permissions: readPermissions, from: rootViewController) { loginResult, error in
-////            switch loginResult {
-////            case .success:
-////                break
-////            case .failed(_):
-////                break
-////            }
-////        }
-////        let result = await withCheckedContinuation { continuation in
-////            manager.logIn(permissions: ["public_profile", "email"], from: rootViewController) { loginResult, error in
-////
-////        }
-//    }
+//        let result = await withCheckedContinuation { continuation in
+//            manager.logIn(permissions: ["public_profile", "email"], from: rootViewController) { loginResult, error in
+//
+//        }
+    }
+}
+
+extension AuthenticationViewModel {
+    func signInWithApple() async -> Bool {
+        return false
+    }
 }
