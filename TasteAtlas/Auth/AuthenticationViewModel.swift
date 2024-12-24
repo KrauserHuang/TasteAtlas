@@ -199,7 +199,7 @@ extension AuthenticationViewModel {
 
 // MARK: - Facebook Sign In
 extension AuthenticationViewModel {
-    func signInWithFacebook() async -> Bool {
+    func signInWithFacebook(token: String) async -> Bool {
         authenticationState = .authenticating
         
         guard let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
@@ -210,19 +210,20 @@ extension AuthenticationViewModel {
         }
         
         let manager = LoginManager()
-        return false
-//        manager.logIn(permissions: readPermissions, from: rootViewController) { loginResult, error in
-//            switch loginResult {
-//            case .success:
-//                break
-//            case .failed(_):
-//                break
-//            }
-//        }
-//        let result = await withCheckedContinuation { continuation in
-//            manager.logIn(permissions: ["public_profile", "email"], from: rootViewController) { loginResult, error in
-//
-//        }
+        let credential = FacebookAuthProvider.credential(withAccessToken: token)
+        
+        do {
+            let result = try await Auth.auth().signIn(with: credential)
+            self.user = result.user
+            self.authenticationState = .authenticated
+            self.displayName = result.user.displayName ?? ""
+            return true
+        } catch {
+            print("Firebase sign-in failed: \(error.localizedDescription)")
+            self.errorMessage = error.localizedDescription
+            self.authenticationState = .unauthenticated
+            return false
+        }
     }
 }
 
