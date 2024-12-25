@@ -24,13 +24,13 @@ struct LoginView: View {
         }
     }
     
-//    private func signInWithFacebook() {
+    private func signInWithFacebook() {
 //        Task {
 //            if await viewModel.signInWithFacebook() == true {
 //                dismiss()
 //            }
 //        }
-//    }
+    }
     
     private func signInWithGoogle() {
         Task {
@@ -60,19 +60,6 @@ struct LoginView: View {
             .frame(maxWidth: .infinity, maxHeight: 50)
             .cornerRadius(8)
             
-            Button(action: signInWithApple) {
-                HStack {
-                    Image(systemName: "apple.logo")
-                        .frame(width: 30, height: 30, alignment: .center)
-                        .padding(.trailing, 8)
-                    Text("Sign in with Apple")
-                        .padding(.vertical, 8)
-                }
-                .frame(maxWidth: .infinity)
-            }
-            .foregroundColor(colorScheme == .dark ? .white : .black)
-            .buttonStyle(.bordered)
-            
             FaceBookLoginButton(onLoginSuccess: { token in
                 Task {
                     let success = await viewModel.signInWithFacebook(token: token.tokenString)
@@ -83,29 +70,45 @@ struct LoginView: View {
             }, onLoginFailure: { error in
                 print("Facebook login failed: \(error.localizedDescription)")
             }
-                                )
+            )
             .frame(maxWidth: .infinity, maxHeight: 50)
             .cornerRadius(8)
-                                
-//            Button(action: signInWithFacebook) {
-//                HStack {
-//                    Image("facebooklogo")
-//                        .frame(width: 25, alignment: .center)
-//                        .padding(.trailing, 8)
-//                    Text("Sign in with Facebook")
-//                        .padding(.vertical, 8)
-//                }
-//                .frame(maxWidth: .infinity)
-//            }
-//            .foregroundColor(colorScheme == .dark ? .white : .black)
-//            .buttonStyle(.bordered)
+            
+            Button(action: signInWithApple) {
+                HStack {
+                    Image(systemName: "apple.logo")
+//                        .frame(width: 30, height: 30, alignment: .center)
+                        .padding(.trailing, 0)
+                    Text("Sign in with Apple")
+                        .font(.headline)
+                        .padding(.vertical, 8)
+                }
+                .frame(maxWidth: .infinity)
+            }
+            .foregroundColor(colorScheme == .dark ? .white : .black)
+            .buttonStyle(.bordered)
+            
+            Button(action: signInWithFacebook) {
+                HStack {
+                    Image("facebooklogo")
+//                        .frame(width: 20, alignment: .center)
+                        .padding(.trailing, 8)
+                    Text("Sign in with Facebook")
+                        .font(.headline)
+                        .padding(.vertical, 8)
+                }
+                .frame(maxWidth: .infinity)
+            }
+            .foregroundColor(colorScheme == .dark ? .white : .black)
+            .buttonStyle(.bordered)
             
             Button(action: signInWithGoogle) {
                 HStack {
                     Image("googlelogo")
-                        .frame(width: 25, alignment: .center)
-                        .padding(.trailing, 8)
+//                        .frame(width: 25, alignment: .center)
+                        .padding(.trailing, 0)
                     Text("Sign in with Google")
+                        .font(.headline)
                         .padding(.vertical, 8)
                 }
                 .frame(maxWidth: .infinity)
