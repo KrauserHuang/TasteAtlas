@@ -29,6 +29,8 @@ extension UINavigationController {
         appearance.configureWithOpaqueBackground()
         appearance.backgroundColor = color
         appearance.shadowColor = .clear
+        appearance.titleTextAttributes = [.foregroundColor: UIColor.primaryEarth]
+        appearance.largeTitleTextAttributes = [.foregroundColor: UIColor.primaryEarth]
         UINavigationBar.appearance().standardAppearance = appearance
         UINavigationBar.appearance().scrollEdgeAppearance = appearance
         UINavigationBar.appearance().compactAppearance = appearance

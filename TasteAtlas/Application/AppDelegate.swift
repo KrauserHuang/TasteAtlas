@@ -21,6 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         setTabBarAppearance()
         configureFirebase()
+        AppAppearance.setupAppearance()
         
         // Initialize Facebook SDK
         ApplicationDelegate.shared.application(
