@@ -7,6 +7,7 @@
 
 import Combine
 import UIKit
+import SwiftUI
 
 class UserProfileViewController: UIViewController {
     
@@ -25,12 +26,14 @@ class UserProfileViewController: UIViewController {
     }
     
     enum Section {
+        case password
         case support
         case logout
         
         var title: String {
             switch self {
-            case .support: return "支援相關"
+            case .password: return "Password"
+            case .support: return "Support"
             case .logout: return ""
             }
         }
@@ -90,8 +93,9 @@ extension UserProfileViewController {
             var contentConfiguration = UIListContentConfiguration.cell()
             contentConfiguration.text = item.title
             contentConfiguration.image = UIImage(systemName: item.icon)
+            contentConfiguration.imageProperties.tintColor = .label
+            contentConfiguration.imageProperties.maximumSize = CGSize(width: 24, height: 24)
             
-            // Accessory 配置
             switch item.accessory {
             case .disclosure:
                 cell.accessories = [.disclosureIndicator()]
@@ -124,18 +128,32 @@ extension UserProfileViewController {
             }
             cell.contentConfiguration = contentConfiguration
         }
+        let logoutCellRegistration = UICollectionView.CellRegistration<UICollectionViewListCell, SettingsItem> { cell, indexPath, item in
+            var contentConfiguration = UIListContentConfiguration.cell()
+            contentConfiguration.text = item.title
+            contentConfiguration.textProperties.alignment = .center
+            contentConfiguration.textProperties.color = .systemRed
+            cell.contentConfiguration = contentConfiguration
+        }
         let headerRegistration = UICollectionView.SupplementaryRegistration<UICollectionViewListCell>(elementKind: UICollectionView.elementKindSectionHeader) { [weak self] headerView, elementKind, indexPath in
             guard let section = self?.dataSource.sectionIdentifier(for: indexPath.section) else { return }
             
             var configuration = headerView.defaultContentConfiguration()
             configuration.text = section.title
-            configuration.textProperties.font = .systemFont(ofSize: 13)
+            configuration.textProperties.font = .preferredFont(forTextStyle: .caption1)
             configuration.textProperties.color = .secondaryLabel
             headerView.contentConfiguration = configuration
         }
         
         let dataSource = DataSource(collectionView: collectionView) { collectionView, indexPath, item in
-            return collectionView.dequeueConfiguredReusableCell(using: cellRegistration, for: indexPath, item: item)
+            guard let section = self.dataSource.sectionIdentifier(for: indexPath.section) else { return nil }
+            
+            switch section {
+            case .support, .password:
+                return collectionView.dequeueConfiguredReusableCell(using: cellRegistration, for: indexPath, item: item)
+            case .logout:
+                return collectionView.dequeueConfiguredReusableCell(using: logoutCellRegistration, for: indexPath, item: item)
+            }
         }
         
         dataSource.supplementaryViewProvider = { collectionView, elementKind, indexPath in
@@ -147,8 +165,13 @@ extension UserProfileViewController {
     
     private func updateSnapshot(animated: Bool = false) {
         var snapshot = Snapshot()
-        snapshot.appendSections([.support, .logout])
+        snapshot.appendSections([.password, .support, .logout])
         
+        snapshot.appendItems([
+            SettingsItem(icon: "numbers", title: "Numbers", accessory: .disclosure),
+            SettingsItem(icon: "key", title: "Graphic", accessory: .toggle(isOn: false)),
+            SettingsItem(icon: "faceid", title: "Biometric", accessory: .toggle(isOn: true)),
+        ], toSection: .password)
         snapshot.appendItems([
             SettingsItem(icon: "support", title: "Support", accessory: .disclosure),
         ], toSection: .support)
@@ -165,12 +188,36 @@ extension UserProfileViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         guard let section = dataSource.sectionIdentifier(for: indexPath.section) else { return }
         guard let item = dataSource.itemIdentifier(for: indexPath) else { return }
+        collectionView.deselectItem(at: indexPath, animated: true)
+        
+//        // Automatically deselect for non-toggle items
+//        switch item.accessory {
+//        case .toggle:
+//            // Don't deselect toggle cells - they should appear unselectable
+//            return
+//        default:
+//            collectionView.deselectItem(at: indexPath, animated: true)
+//        }
         
         switch section {
-        case .support: return
+        case .support, .password:
+            if case .toggle = item.accessory {
+                return // No action for toggle cells when tapped
+            }
+            // Handle other cell taps here
         case .logout:
             showLogoutAlert()
         }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, shouldHighlightItemAt indexPath: IndexPath) -> Bool {
+        guard let item = dataSource.itemIdentifier(for: indexPath) else { return true }
+        
+        if case .toggle = item.accessory {
+            return false
+        }
+        
+        return true
     }
     
     private func showLogoutAlert() {
@@ -182,4 +229,9 @@ extension UserProfileViewController: UICollectionViewDelegate {
         })
         present(alert, animated: true)
     }
+}
+
+#Preview {
+//    UserProfileViewController().showPreview()
+    UserProfileViewController().showPreview().preferredColorScheme(.dark)
 }

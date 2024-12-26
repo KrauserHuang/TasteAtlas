@@ -60,6 +60,7 @@
 		4F937D232D19641F000D3A2B /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F937D222D19641F000D3A2B /* LoginView.swift */; };
 		4F937D252D196D71000D3A2B /* ReLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F937D242D196D71000D3A2B /* ReLoginViewController.swift */; };
 		4F937D362D1D268B000D3A2B /* AppAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F937D352D1D268B000D3A2B /* AppAppearance.swift */; };
+		4F937D3A2D1D4756000D3A2B /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F937D392D1D4756000D3A2B /* UIViewController.swift */; };
 		4FBD59C72D0689E800807E30 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FBD59B62D0689E800807E30 /* LaunchScreen.storyboard */; };
 		4FBD59C82D0689E800807E30 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FBD59BF2D0689E800807E30 /* Assets.xcassets */; };
 		4FBD59CA2D0689E800807E30 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FBD59B42D0689E800807E30 /* AppDelegate.swift */; };
@@ -142,6 +143,7 @@
 		4F937D222D19641F000D3A2B /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		4F937D242D196D71000D3A2B /* ReLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReLoginViewController.swift; sourceTree = "<group>"; };
 		4F937D352D1D268B000D3A2B /* AppAppearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAppearance.swift; sourceTree = "<group>"; };
+		4F937D392D1D4756000D3A2B /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		4FBD59702D05483000807E30 /* TasteAtlas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TasteAtlas.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FBD59892D05483300807E30 /* TasteAtlasTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TasteAtlasTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FBD59932D05483300807E30 /* TasteAtlasUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TasteAtlasUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -428,6 +430,7 @@
 				4F7996D72D0EB2BA00ED1312 /* UIControl.swift */,
 				1F32EFBD2D1511AF00C52FF0 /* UIStackView.swift */,
 				1F32EFBF2D15150E00C52FF0 /* UIImage.swift */,
+				4F937D392D1D4756000D3A2B /* UIViewController.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -758,6 +761,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F937D3A2D1D4756000D3A2B /* UIViewController.swift in Sources */,
 				1FDABA762D06F62500110EDC /* MapViewInteractor.swift in Sources */,
 				1F32EFC02D15150E00C52FF0 /* UIImage.swift in Sources */,
 				4F0886D22D14CD88000F3E4B /* LoginButton.swift in Sources */,
