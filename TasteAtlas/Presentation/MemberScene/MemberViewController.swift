@@ -8,31 +8,23 @@
 import Combine
 import FirebaseAuth
 import UIKit
+import SwiftUI
 
 class MemberViewController: UIViewController {
     
-    private lazy var photoImageView: UIImageView = {
-        let imageView = UIImageView()
-        imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.contentMode = .scaleAspectFill
-        imageView.layer.cornerRadius = 50
-        imageView.layer.masksToBounds = true
-        return imageView
-    }()
-    
     private let viewModel = AuthenticationViewModel()
     private var subscriptions: Set<AnyCancellable> = []
-    
     private var user: User?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setupNavigation()
         setupUI()
     }
     
     // MARK: - Setup UI
-    private func setupUI() {
+    private func setupNavigation() {
         viewModel.$user
             .receive(on: DispatchQueue.main)
             .sink { [weak self] user in
@@ -45,8 +37,8 @@ class MemberViewController: UIViewController {
                 }
             }
             .store(in: &subscriptions)
-        
-        let rightBarButton = UIBarButtonItem(title: "設定", style: .plain, target: self, action: #selector(navigateUserProfile))
+        let image = UIImage(systemName: "gear")?.withTintColor(.primaryEarth, renderingMode: .alwaysOriginal)
+        let rightBarButton = UIBarButtonItem(image: image, style: .plain, target: self, action: #selector(navigateUserProfile))
         navigationItem.rightBarButtonItem = rightBarButton
     }
     
@@ -59,5 +51,25 @@ class MemberViewController: UIViewController {
             let vc = ReLoginViewController()
             present(vc, animated: true)
         }
+    }
+    
+    private func setupUI() {
+        let memberView = MemberView()
+            .environmentObject(viewModel)
+        
+        let hostingController = UIHostingController(rootView: memberView)
+        
+        addChild(hostingController)
+        view.addSubview(hostingController.view)
+        hostingController.didMove(toParent: self)
+        
+        // Setup constraints
+        hostingController.view.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            hostingController.view.topAnchor.constraint(equalTo: view.topAnchor),
+            hostingController.view.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            hostingController.view.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            hostingController.view.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+        ])
     }
 }
