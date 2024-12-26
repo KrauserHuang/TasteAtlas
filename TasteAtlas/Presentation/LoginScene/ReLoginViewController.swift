@@ -26,7 +26,6 @@ class ReLoginViewController: UIViewController {
         
         addChild(hostingController)
         view.addSubview(hostingController.view)
-//        hostingController.view.pinToSuperview()
         hostingController.didMove(toParent: self)
         
         // Setup constraints

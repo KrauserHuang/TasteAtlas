@@ -8,6 +8,7 @@
 import AuthenticationServices
 import Combine
 import FacebookLogin
+import GoogleSignInSwift
 import SwiftUI
 
 struct LoginView: View {
@@ -25,11 +26,11 @@ struct LoginView: View {
     }
     
     private func signInWithFacebook() {
-//        Task {
-//            if await viewModel.signInWithFacebook() == true {
-//                dismiss()
-//            }
-//        }
+        Task {
+            if await viewModel.signInWithFacebook() == true {
+                dismiss()
+            }
+        }
     }
     
     private func signInWithGoogle() {
@@ -71,6 +72,12 @@ struct LoginView: View {
                 print("Facebook login failed: \(error.localizedDescription)")
             }
             )
+            .frame(maxWidth: .infinity, maxHeight: 50)
+            .cornerRadius(8)
+            
+            GoogleSignInButton {
+                signInWithGoogle()
+            }
             .frame(maxWidth: .infinity, maxHeight: 50)
             .cornerRadius(8)
             

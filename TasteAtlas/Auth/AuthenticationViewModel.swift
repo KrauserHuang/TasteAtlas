@@ -225,6 +225,56 @@ extension AuthenticationViewModel {
             return false
         }
     }
+    
+    func signInWithFacebook() async -> Bool {
+        guard let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
+              let window = windowScene.windows.first,
+              let rootViewController = window.rootViewController else {
+            print("There is no root view controller!")
+            return false
+        }
+        
+        let manager = LoginManager()
+        
+        // First continuation for Facebook Login
+        let token: AccessToken? = await withCheckedContinuation { continuation in
+            manager.logIn(permissions: [], from: rootViewController) { result, error in
+                if let error = error {
+                    print("Facebook login failed: \(error.localizedDescription)")
+                    self.errorMessage = error.localizedDescription
+                    continuation.resume(returning: nil)
+                    return
+                }
+                
+                guard let token = AccessToken.current else {
+                    print("Facebook login failed: No token")
+                    continuation.resume(returning: nil)
+                    return
+                }
+                
+                continuation.resume(returning: token)
+            }
+        }
+        
+        // Check if we got a token
+        guard let validToken = token else {
+            return false
+        }
+        
+        // Now we can use async/await for Firebase auth
+        let credential = FacebookAuthProvider.credential(withAccessToken: validToken.tokenString)
+        
+        do {
+            let result = try await Auth.auth().signIn(with: credential)
+            self.user = result.user
+            self.displayName = result.user.displayName ?? ""
+            return true
+        } catch {
+            print("Firebase sign-in failed: \(error.localizedDescription)")
+            errorMessage = error.localizedDescription
+            return false
+        }
+    }
 }
 
 // MARK: - Apple Sign In
