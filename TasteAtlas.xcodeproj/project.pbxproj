@@ -62,6 +62,8 @@
 		4F937D362D1D268B000D3A2B /* AppAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F937D352D1D268B000D3A2B /* AppAppearance.swift */; };
 		4F937D382D1D38DF000D3A2B /* MemberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F937D372D1D38DF000D3A2B /* MemberView.swift */; };
 		4F937D3A2D1D4756000D3A2B /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F937D392D1D4756000D3A2B /* UIViewController.swift */; };
+		4F937D402D1D5825000D3A2B /* CLLocationCoordinate2D.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F937D3F2D1D5825000D3A2B /* CLLocationCoordinate2D.swift */; };
+		4F937D452D1E7909000D3A2B /* MKCoordinateRegion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F937D442D1E7909000D3A2B /* MKCoordinateRegion.swift */; };
 		4FBD59C72D0689E800807E30 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FBD59B62D0689E800807E30 /* LaunchScreen.storyboard */; };
 		4FBD59C82D0689E800807E30 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FBD59BF2D0689E800807E30 /* Assets.xcassets */; };
 		4FBD59CA2D0689E800807E30 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FBD59B42D0689E800807E30 /* AppDelegate.swift */; };
@@ -146,6 +148,8 @@
 		4F937D352D1D268B000D3A2B /* AppAppearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAppearance.swift; sourceTree = "<group>"; };
 		4F937D372D1D38DF000D3A2B /* MemberView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberView.swift; sourceTree = "<group>"; };
 		4F937D392D1D4756000D3A2B /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		4F937D3F2D1D5825000D3A2B /* CLLocationCoordinate2D.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLLocationCoordinate2D.swift; sourceTree = "<group>"; };
+		4F937D442D1E7909000D3A2B /* MKCoordinateRegion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MKCoordinateRegion.swift; sourceTree = "<group>"; };
 		4FBD59702D05483000807E30 /* TasteAtlas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TasteAtlas.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FBD59892D05483300807E30 /* TasteAtlasTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TasteAtlasTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FBD59932D05483300807E30 /* TasteAtlasUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TasteAtlasUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -433,6 +437,8 @@
 				1F32EFBD2D1511AF00C52FF0 /* UIStackView.swift */,
 				1F32EFBF2D15150E00C52FF0 /* UIImage.swift */,
 				4F937D392D1D4756000D3A2B /* UIViewController.swift */,
+				4F937D3F2D1D5825000D3A2B /* CLLocationCoordinate2D.swift */,
+				4F937D442D1E7909000D3A2B /* MKCoordinateRegion.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -791,6 +797,7 @@
 				4FBD59EB2D08F1C400807E30 /* MapViewModel.swift in Sources */,
 				4FBD59CD2D0689E800807E30 /* UIView.swift in Sources */,
 				1F04930E2D07F7E500C861DD /* SpinnerFooterView.swift in Sources */,
+				4F937D452D1E7909000D3A2B /* MKCoordinateRegion.swift in Sources */,
 				1F32EFBE2D1511AF00C52FF0 /* UIStackView.swift in Sources */,
 				4FBD59CE2D0689E800807E30 /* ReuseIdentifiable.swift in Sources */,
 				4FBD59E92D08799700807E30 /* MapView.swift in Sources */,
@@ -816,6 +823,7 @@
 				4F0886D02D1459DB000F3E4B /* LoginViewController.swift in Sources */,
 				1F1A6EBC2D09818F0033CB71 /* HTTPMethod.swift in Sources */,
 				4F937D232D19641F000D3A2B /* LoginView.swift in Sources */,
+				4F937D402D1D5825000D3A2B /* CLLocationCoordinate2D.swift in Sources */,
 				4F7996C92D0D35BF00ED1312 /* SearchBarButton.swift in Sources */,
 				1FDABA7A2D06F95400110EDC /* MapViewController.swift in Sources */,
 				4FBD59E72D07104600807E30 /* RestaurantListController.swift in Sources */,
