@@ -27,15 +27,15 @@
 	<string>a4bfd86a91b3c7bd87f5824525a124a7</string>
 	<key>FacebookDisplayName</key>
 	<string>TasteAtlas</string>
-    <key>LSApplicationQueriesSchemes</key>
-    <array>
-        <string>fbapi</string>
-        <string>fb-messenger-share-api</string>
-        <string>fbauth2</string>
-        <string>fbshareextension</string>
-    </array>
 	<key>GIDClientID</key>
 	<string>739965046802-dv8nll0r835t9pvtn6q6qe8kgld747h6.apps.googleusercontent.com</string>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>fbapi</string>
+		<string>fb-messenger-share-api</string>
+		<string>fbauth2</string>
+		<string>fbshareextension</string>
+	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
