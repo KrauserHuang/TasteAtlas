@@ -62,6 +62,7 @@
 		4F937D362D1D268B000D3A2B /* AppAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F937D352D1D268B000D3A2B /* AppAppearance.swift */; };
 		4F937D382D1D38DF000D3A2B /* MemberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F937D372D1D38DF000D3A2B /* MemberView.swift */; };
 		4F937D3A2D1D4756000D3A2B /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F937D392D1D4756000D3A2B /* UIViewController.swift */; };
+		4F937D3E2D1D5799000D3A2B /* MapSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F937D3D2D1D5799000D3A2B /* MapSwiftUIView.swift */; };
 		4F937D402D1D5825000D3A2B /* CLLocationCoordinate2D.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F937D3F2D1D5825000D3A2B /* CLLocationCoordinate2D.swift */; };
 		4F937D432D1E4F55000D3A2B /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F937D422D1E4F55000D3A2B /* LocationManager.swift */; };
 		4F937D452D1E7909000D3A2B /* MKCoordinateRegion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F937D442D1E7909000D3A2B /* MKCoordinateRegion.swift */; };
@@ -149,6 +150,7 @@
 		4F937D352D1D268B000D3A2B /* AppAppearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAppearance.swift; sourceTree = "<group>"; };
 		4F937D372D1D38DF000D3A2B /* MemberView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberView.swift; sourceTree = "<group>"; };
 		4F937D392D1D4756000D3A2B /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		4F937D3D2D1D5799000D3A2B /* MapSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapSwiftUIView.swift; sourceTree = "<group>"; };
 		4F937D3F2D1D5825000D3A2B /* CLLocationCoordinate2D.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLLocationCoordinate2D.swift; sourceTree = "<group>"; };
 		4F937D422D1E4F55000D3A2B /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		4F937D442D1E7909000D3A2B /* MKCoordinateRegion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MKCoordinateRegion.swift; sourceTree = "<group>"; };
@@ -588,6 +590,7 @@
 			isa = PBXGroup;
 			children = (
 				4F7996CB2D0D38E600ED1312 /* MapController.swift */,
+				4F937D3D2D1D5799000D3A2B /* MapSwiftUIView.swift */,
 			);
 			path = MapScene;
 			sourceTree = "<group>";
@@ -811,6 +814,7 @@
 				4F937D452D1E7909000D3A2B /* MKCoordinateRegion.swift in Sources */,
 				1F32EFBE2D1511AF00C52FF0 /* UIStackView.swift in Sources */,
 				4FBD59CE2D0689E800807E30 /* ReuseIdentifiable.swift in Sources */,
+				4F937D3E2D1D5799000D3A2B /* MapSwiftUIView.swift in Sources */,
 				4FBD59E92D08799700807E30 /* MapView.swift in Sources */,
 				1F1A6EBE2D0981CB0033CB71 /* Endpoint.swift in Sources */,
 				1FDABA782D06F63100110EDC /* MapViewRouter.swift in Sources */,
