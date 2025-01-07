@@ -66,6 +66,7 @@
 		4F937D402D1D5825000D3A2B /* CLLocationCoordinate2D.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F937D3F2D1D5825000D3A2B /* CLLocationCoordinate2D.swift */; };
 		4F937D432D1E4F55000D3A2B /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F937D422D1E4F55000D3A2B /* LocationManager.swift */; };
 		4F937D452D1E7909000D3A2B /* MKCoordinateRegion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F937D442D1E7909000D3A2B /* MKCoordinateRegion.swift */; };
+		4F937D492D1E981A000D3A2B /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F937D482D1E981A000D3A2B /* Restaurant.swift */; };
 		4FBD59C72D0689E800807E30 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FBD59B62D0689E800807E30 /* LaunchScreen.storyboard */; };
 		4FBD59C82D0689E800807E30 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FBD59BF2D0689E800807E30 /* Assets.xcassets */; };
 		4FBD59CA2D0689E800807E30 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FBD59B42D0689E800807E30 /* AppDelegate.swift */; };
@@ -154,6 +155,7 @@
 		4F937D3F2D1D5825000D3A2B /* CLLocationCoordinate2D.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLLocationCoordinate2D.swift; sourceTree = "<group>"; };
 		4F937D422D1E4F55000D3A2B /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		4F937D442D1E7909000D3A2B /* MKCoordinateRegion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MKCoordinateRegion.swift; sourceTree = "<group>"; };
+		4F937D482D1E981A000D3A2B /* Restaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
 		4FBD59702D05483000807E30 /* TasteAtlas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TasteAtlas.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FBD59892D05483300807E30 /* TasteAtlasTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TasteAtlasTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FBD59932D05483300807E30 /* TasteAtlasUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TasteAtlasUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -405,6 +407,22 @@
 			path = Location;
 			sourceTree = "<group>";
 		};
+		4F937D462D1E97FC000D3A2B /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				4F937D472D1E9807000D3A2B /* Entities */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		4F937D472D1E9807000D3A2B /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				4F937D482D1E981A000D3A2B /* Restaurant.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
 		4FBD59672D05483000807E30 = {
 			isa = PBXGroup;
 			children = (
@@ -499,6 +517,7 @@
 		4FBD59C52D0689E800807E30 /* TasteAtlas */ = {
 			isa = PBXGroup;
 			children = (
+				4F937D462D1E97FC000D3A2B /* Domain */,
 				4FF4C2952D17BDF700F6B8EF /* Presentation */,
 				1F32EFC42D15787600C52FF0 /* Auth */,
 				4FBD59B82D0689E800807E30 /* Application */,
@@ -801,6 +820,7 @@
 				4FDE9EDA2D16BC18006C130F /* MemberViewController.swift in Sources */,
 				1F38F6032D0AB83400E6D078 /* Dictionary.swift in Sources */,
 				4FBD59CC2D0689E800807E30 /* UICollectionView.swift in Sources */,
+				4F937D492D1E981A000D3A2B /* Restaurant.swift in Sources */,
 				1FDABA742D06F61800110EDC /* MapViewBuilder.swift in Sources */,
 				4F7996CC2D0D38E600ED1312 /* MapController.swift in Sources */,
 				1F1A6EAD2D0947820033CB71 /* SearchViewBuilder.swift in Sources */,
