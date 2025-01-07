@@ -29,61 +29,58 @@ struct MapSwiftUIView: View {
     @State private var locationManager = LocationManager.shared
     @State private var selectedMapOption: MapOptions = .standard
     @State private var position: MapCameraPosition = .userLocation(fallback: .automatic)
+    @State private var mapItems: [MKMapItem] = []
+    @State private var isSearching: Bool = false
+    @State private var visibleRegion: MKCoordinateRegion?
+    
+    @Namespace var mapScope
+    
+    private func search() async {
+        do {
+            mapItems = try await performSearch(query: "Coffee", visibleRegion: visibleRegion)
+            isSearching = false
+        } catch {
+            mapItems = []
+            isSearching = false
+        }
+    }
     
     var body: some View {
-        ZStack(alignment: .top) {
-            Map(position: $position) {
-                Annotation("Taipei101", coordinate: .taiepi101) {
-                    Image(systemName: "fireworks")
-                        .padding(4)
-                        .foregroundColor(.white)
-                        .background(.red)
-                        .cornerRadius(.infinity)
-                }
-                Annotation("Restaurant", coordinate: .restaurant) {
-                    Image(systemName: "flame")
-                        .padding(5)
-                        .foregroundStyle(.blue)
-                        .background(.yellow)
-                        .cornerRadius(.infinity)
+        ZStack(alignment: .topTrailing) {
+            Map(position: $position, scope: mapScope) {
+                ForEach(mapItems, id: \.self) { mapItem in
+                    Marker(item: mapItem)
                 }
                 UserAnnotation()
             }
-            .mapStyle(selectedMapOption.mapStyle)
+            .mapControlVisibility(.hidden)
+            .mapStyle(.standard(elevation: .realistic))
             .onChange(of: locationManager.region) {
                 withAnimation {
                     position = .region(locationManager.region)
                 }
             }
-            
-            Picker("Map Styles", selection: $selectedMapOption) {
-                ForEach(MapOptions.allCases) { mapOption in
-                    Text(mapOption.rawValue.capitalized).tag(mapOption)
+            .onMapCameraChange { context in
+                visibleRegion = context.region
+            }
+            .task(id: isSearching) {
+                if isSearching {
+                    await search()
                 }
             }
-            .pickerStyle(.segmented)
-            .background(.white)
-            .padding()
-            
-            VStack {
-                Spacer()
-                HStack {
+            .overlay(alignment: .topTrailing) {
+                VStack {
                     Spacer()
-                    Button {
-                        withAnimation {
-                            position = .userLocation(fallback: .automatic)
-                        }
-                    } label: {
-                        Image(systemName: "paperplane.fill")
-                            .padding(16)
-                            .background(.black)
-                            .foregroundStyle(.white)
-                            .frame(width: 40, height: 40)
-                            .cornerRadius(8)
-                    }
-                    .padding()
+                    MapUserLocationButton(scope: mapScope)
+                    MapPitchToggle(scope: mapScope)
+                    MapCompass(scope: mapScope)
+                        .mapControlVisibility(.visible)
+                    Spacer()
                 }
+                .padding(.trailing, 10)
+                .buttonBorderShape(.roundedRectangle)
             }
+            .mapScope(mapScope)
         }
     }
 }
