@@ -57,6 +57,7 @@
 		4F7996D42D0EAC8800ED1312 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7996D32D0EAC8800ED1312 /* SearchViewController.swift */; };
 		4F7996D62D0EB1BC00ED1312 /* CombineCompatible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7996D52D0EB1BC00ED1312 /* CombineCompatible.swift */; };
 		4F7996D82D0EB2BA00ED1312 /* UIControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7996D72D0EB2BA00ED1312 /* UIControl.swift */; };
+		4F7997FF2D27D30F00303F7F /* MapUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7997FE2D27D30F00303F7F /* MapUtilities.swift */; };
 		4F937D232D19641F000D3A2B /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F937D222D19641F000D3A2B /* LoginView.swift */; };
 		4F937D252D196D71000D3A2B /* ReLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F937D242D196D71000D3A2B /* ReLoginViewController.swift */; };
 		4F937D362D1D268B000D3A2B /* AppAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F937D352D1D268B000D3A2B /* AppAppearance.swift */; };
@@ -146,6 +147,7 @@
 		4F7996D32D0EAC8800ED1312 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		4F7996D52D0EB1BC00ED1312 /* CombineCompatible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineCompatible.swift; sourceTree = "<group>"; };
 		4F7996D72D0EB2BA00ED1312 /* UIControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIControl.swift; sourceTree = "<group>"; };
+		4F7997FE2D27D30F00303F7F /* MapUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapUtilities.swift; sourceTree = "<group>"; };
 		4F937D222D19641F000D3A2B /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		4F937D242D196D71000D3A2B /* ReLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReLoginViewController.swift; sourceTree = "<group>"; };
 		4F937D352D1D268B000D3A2B /* AppAppearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAppearance.swift; sourceTree = "<group>"; };
@@ -399,6 +401,14 @@
 			path = Builder;
 			sourceTree = "<group>";
 		};
+		4F7997FD2D27D2D800303F7F /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				4F7997FE2D27D30F00303F7F /* MapUtilities.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		4F937D412D1E4F38000D3A2B /* Location */ = {
 			isa = PBXGroup;
 			children = (
@@ -488,6 +498,7 @@
 		4FBD59BE2D0689E800807E30 /* Miscellaneous */ = {
 			isa = PBXGroup;
 			children = (
+				4F7997FD2D27D2D800303F7F /* Utils */,
 				1FDABA652D06DCD200110EDC /* CustomTransition */,
 				4FBD59BD2D0689E800807E30 /* Protocols */,
 			);
@@ -810,6 +821,7 @@
 				1F38F6052D0AB8CC00E6D078 /* Encodable.swift in Sources */,
 				4F7996D62D0EB1BC00ED1312 /* CombineCompatible.swift in Sources */,
 				1F1A6EAF2D0947C90033CB71 /* SearchViewInteractor.swift in Sources */,
+				4F7997FF2D27D30F00303F7F /* MapUtilities.swift in Sources */,
 				4FF4C2942D17B8E500F6B8EF /* UserProfileViewController.swift in Sources */,
 				1F04930C2D07F41700C861DD /* SearchController.swift in Sources */,
 				4FBD59CA2D0689E800807E30 /* AppDelegate.swift in Sources */,
