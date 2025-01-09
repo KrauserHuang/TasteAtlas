@@ -32,12 +32,13 @@ struct MapSwiftUIView: View {
     @State private var mapItems: [MKMapItem] = []
     @State private var isSearching: Bool = false
     @State private var visibleRegion: MKCoordinateRegion?
+    @State private var query: String = ""
     
     @Namespace var mapScope
     
     private func search() async {
         do {
-            mapItems = try await performSearch(query: "Coffee", visibleRegion: visibleRegion)
+            mapItems = try await performSearch(query: query, visibleRegion: visibleRegion)
             isSearching = false
         } catch {
             mapItems = []
@@ -81,6 +82,10 @@ struct MapSwiftUIView: View {
                 .buttonBorderShape(.roundedRectangle)
             }
             .mapScope(mapScope)
+            
+            ZStack {
+                SearchBarView(searchText: $query, isSearching: $isSearching)
+            }
         }
     }
 }

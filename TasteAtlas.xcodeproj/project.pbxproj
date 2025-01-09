@@ -58,6 +58,7 @@
 		4F7996D62D0EB1BC00ED1312 /* CombineCompatible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7996D52D0EB1BC00ED1312 /* CombineCompatible.swift */; };
 		4F7996D82D0EB2BA00ED1312 /* UIControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7996D72D0EB2BA00ED1312 /* UIControl.swift */; };
 		4F7997FF2D27D30F00303F7F /* MapUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7997FE2D27D30F00303F7F /* MapUtilities.swift */; };
+		4F7998782D2D335800303F7F /* SearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7998772D2D335800303F7F /* SearchBarView.swift */; };
 		4F937D232D19641F000D3A2B /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F937D222D19641F000D3A2B /* LoginView.swift */; };
 		4F937D252D196D71000D3A2B /* ReLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F937D242D196D71000D3A2B /* ReLoginViewController.swift */; };
 		4F937D362D1D268B000D3A2B /* AppAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F937D352D1D268B000D3A2B /* AppAppearance.swift */; };
@@ -148,6 +149,7 @@
 		4F7996D52D0EB1BC00ED1312 /* CombineCompatible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineCompatible.swift; sourceTree = "<group>"; };
 		4F7996D72D0EB2BA00ED1312 /* UIControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIControl.swift; sourceTree = "<group>"; };
 		4F7997FE2D27D30F00303F7F /* MapUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapUtilities.swift; sourceTree = "<group>"; };
+		4F7998772D2D335800303F7F /* SearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarView.swift; sourceTree = "<group>"; };
 		4F937D222D19641F000D3A2B /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		4F937D242D196D71000D3A2B /* ReLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReLoginViewController.swift; sourceTree = "<group>"; };
 		4F937D352D1D268B000D3A2B /* AppAppearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAppearance.swift; sourceTree = "<group>"; };
@@ -344,6 +346,7 @@
 				4FBD59C42D0689E800807E30 /* ViewController.swift */,
 				4F7996C82D0D35BF00ED1312 /* SearchBarButton.swift */,
 				4F0886D12D14CD88000F3E4B /* LoginButton.swift */,
+				4F7998772D2D335800303F7F /* SearchBarView.swift */,
 			);
 			path = CustomUI;
 			sourceTree = "<group>";
@@ -849,6 +852,7 @@
 				4F937D3E2D1D5799000D3A2B /* MapSwiftUIView.swift in Sources */,
 				4FBD59E92D08799700807E30 /* MapView.swift in Sources */,
 				1F1A6EBE2D0981CB0033CB71 /* Endpoint.swift in Sources */,
+				4F7998782D2D335800303F7F /* SearchBarView.swift in Sources */,
 				1FDABA782D06F63100110EDC /* MapViewRouter.swift in Sources */,
 				1F1A6EBA2D0980AD0033CB71 /* NetworkConfig.swift in Sources */,
 				4F7996D82D0EB2BA00ED1312 /* UIControl.swift in Sources */,
