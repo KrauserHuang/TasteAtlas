@@ -29,6 +29,9 @@
 		1F38F6012D0AB4EA00E6D078 /* DataTransferService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F38F6002D0AB4EA00E6D078 /* DataTransferService.swift */; };
 		1F38F6032D0AB83400E6D078 /* Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F38F6022D0AB83400E6D078 /* Dictionary.swift */; };
 		1F38F6052D0AB8CC00E6D078 /* Encodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F38F6042D0AB8CC00E6D078 /* Encodable.swift */; };
+		1F61BAB02D35040A00B1DEC5 /* PlaceCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F61BAAF2D35040A00B1DEC5 /* PlaceCardView.swift */; };
+		1F61BAB22D350F4100B1DEC5 /* FavoriteButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F61BAB12D350F4100B1DEC5 /* FavoriteButtonView.swift */; };
+		1F61BAB42D35155000B1DEC5 /* DismissButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F61BAB32D35155000B1DEC5 /* DismissButtonView.swift */; };
 		1F804E652D191697005100D8 /* FacebookLogin in Frameworks */ = {isa = PBXBuildFile; productRef = 1F804E642D191697005100D8 /* FacebookLogin */; };
 		1FDABA5F2D06D11300110EDC /* UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FDABA5E2D06D11300110EDC /* UITableView.swift */; };
 		1FDABA612D06D71600110EDC /* UIImageColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FDABA602D06D71600110EDC /* UIImageColors.swift */; };
@@ -131,6 +134,9 @@
 		1F38F6002D0AB4EA00E6D078 /* DataTransferService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTransferService.swift; sourceTree = "<group>"; };
 		1F38F6022D0AB83400E6D078 /* Dictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dictionary.swift; sourceTree = "<group>"; };
 		1F38F6042D0AB8CC00E6D078 /* Encodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Encodable.swift; sourceTree = "<group>"; };
+		1F61BAAF2D35040A00B1DEC5 /* PlaceCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceCardView.swift; sourceTree = "<group>"; };
+		1F61BAB12D350F4100B1DEC5 /* FavoriteButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteButtonView.swift; sourceTree = "<group>"; };
+		1F61BAB32D35155000B1DEC5 /* DismissButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DismissButtonView.swift; sourceTree = "<group>"; };
 		1FDABA5E2D06D11300110EDC /* UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableView.swift; sourceTree = "<group>"; };
 		1FDABA602D06D71600110EDC /* UIImageColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageColors.swift; sourceTree = "<group>"; };
 		1FDABA632D06DC0B00110EDC /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
@@ -347,6 +353,9 @@
 				4F7996C82D0D35BF00ED1312 /* SearchBarButton.swift */,
 				4F0886D12D14CD88000F3E4B /* LoginButton.swift */,
 				4F7998772D2D335800303F7F /* SearchBarView.swift */,
+				1F61BAAF2D35040A00B1DEC5 /* PlaceCardView.swift */,
+				1F61BAB12D350F4100B1DEC5 /* FavoriteButtonView.swift */,
+				1F61BAB32D35155000B1DEC5 /* DismissButtonView.swift */,
 			);
 			path = CustomUI;
 			sourceTree = "<group>";
@@ -818,6 +827,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4F937D3A2D1D4756000D3A2B /* UIViewController.swift in Sources */,
+				1F61BAB42D35155000B1DEC5 /* DismissButtonView.swift in Sources */,
 				1FDABA762D06F62500110EDC /* MapViewInteractor.swift in Sources */,
 				1F32EFC02D15150E00C52FF0 /* UIImage.swift in Sources */,
 				4F0886D22D14CD88000F3E4B /* LoginButton.swift in Sources */,
@@ -845,6 +855,7 @@
 				1FDABA612D06D71600110EDC /* UIImageColors.swift in Sources */,
 				4FBD59EB2D08F1C400807E30 /* MapViewModel.swift in Sources */,
 				4FBD59CD2D0689E800807E30 /* UIView.swift in Sources */,
+				1F61BAB22D350F4100B1DEC5 /* FavoriteButtonView.swift in Sources */,
 				1F04930E2D07F7E500C861DD /* SpinnerFooterView.swift in Sources */,
 				4F937D452D1E7909000D3A2B /* MKCoordinateRegion.swift in Sources */,
 				1F32EFBE2D1511AF00C52FF0 /* UIStackView.swift in Sources */,
@@ -861,6 +872,7 @@
 				4F7996CE2D0E81EF00ED1312 /* UIColor.swift in Sources */,
 				1F0493062D07DD5000C861DD /* AccountInteractor.swift in Sources */,
 				4FBD59E32D07101400807E30 /* RestaurantListInteractor.swift in Sources */,
+				1F61BAB02D35040A00B1DEC5 /* PlaceCardView.swift in Sources */,
 				1F32EFC62D15788800C52FF0 /* AuthenticationViewModel.swift in Sources */,
 				1F0493122D08235A00C861DD /* Interactable.swift in Sources */,
 				4F937D252D196D71000D3A2B /* ReLoginViewController.swift in Sources */,
@@ -944,7 +956,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -973,7 +985,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

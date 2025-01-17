@@ -33,6 +33,8 @@ struct MapSwiftUIView: View {
     @State private var isSearching: Bool = false
     @State private var visibleRegion: MKCoordinateRegion?
     @State private var query: String = ""
+    @State private var selectedMapItem: MKMapItem?
+    @State private var showPlaceCard: Bool = false
     
     @Namespace var mapScope
     
@@ -48,7 +50,7 @@ struct MapSwiftUIView: View {
     
     var body: some View {
         ZStack(alignment: .topTrailing) {
-            Map(position: $position, scope: mapScope) {
+            Map(position: $position, selection: $selectedMapItem, scope: mapScope) {
                 ForEach(mapItems, id: \.self) { mapItem in
                     Marker(item: mapItem)
                 }
@@ -59,6 +61,11 @@ struct MapSwiftUIView: View {
             .onChange(of: locationManager.region) {
                 withAnimation {
                     position = .region(locationManager.region)
+                }
+            }
+            .onChange(of: selectedMapItem) { oldValue, newValue in
+                withAnimation {
+                    showPlaceCard = newValue != nil
                 }
             }
             .onMapCameraChange { context in
@@ -82,11 +89,41 @@ struct MapSwiftUIView: View {
                 .buttonBorderShape(.roundedRectangle)
             }
             .mapScope(mapScope)
-            
-            ZStack {
+            .overlay(alignment: .top) {
                 SearchBarView(searchText: $query, isSearching: $isSearching)
+                    .padding(.top)
+            }
+            
+            VStack {
+//                SearchBarView(searchText: $query, isSearching: $isSearching)
+                
+                Spacer()
+                
+//                if showPlaceCard {
+//                    PlaceCardView()
+//                        .transition(.move(edge: .bottom))
+//                        .frame(maxWidth: .infinity, maxHeight: 300)
+//                        .background(Color(uiColor: .systemBackground))
+//                        .cornerRadius(12)
+//                        .shadow(radius: 5)
+//                        .padding()
+//                }
+                if showPlaceCard {
+                    PlaceCardView()
+                        .transition(.move(edge: .bottom).combined(with: .opacity))
+                        .frame(maxWidth: .infinity)
+                        .frame(height: 300)
+                        .background(
+                            RoundedRectangle(cornerRadius: 12)
+                                .fill(Color(uiColor: .systemBackground))
+                                .shadow(radius: 8)
+                        )
+                        .padding()
+                }
             }
         }
+//        .mapItemDetailPopover(item: $selectedMapItem)
+        .edgesIgnoringSafeArea(.bottom)
     }
 }
 
