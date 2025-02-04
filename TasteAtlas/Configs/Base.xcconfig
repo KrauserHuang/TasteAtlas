@@ -1,0 +1,13 @@
+//
+//  Base.xcconfig
+//  TasteAtlas
+//
+//  Created by IT-MAC-02 on 2025/2/3.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+// Base.xcconfig
+APP_NAME = TasteAtlas
+BASE_BUNDLE_IDENTIFIER = com.krauserhuang.TasteAtlas

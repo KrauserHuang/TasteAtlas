@@ -1,0 +1,35 @@
+//
+//  Production.xcconfig
+//  TasteAtlas
+//
+//  Created by IT-MAC-02 on 2025/2/3.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+// Production.xcconfig
+
+#include "Base.xcconfig"
+
+// API URL
+API_BASE_URL = https:/$()/my-cool-staging-url.com
+
+// API Key
+API_KEY = my_super_secret_production_api_key
+
+// Backward Compatible Values
+IS_PRODUCTION = NO
+ENV_NAME = production
+
+// Overriding (do NOT change key name)
+// app name
+PRODUCT_NAME = $(APP_NAME) $(ENV_NAME)
+// bundle id
+PRODUCT_BUNDLE_IDENTIFIER = $(BASE_BUNDLE_IDENTIFIER).$(ENV_NAME)
+// app icon
+ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon_Production
+// app version
+MARKETING_VERSION = 1.0.0
+// build number
+CURRENT_PROJECT_VERSION = 1

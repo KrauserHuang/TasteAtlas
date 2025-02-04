@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
    LastUpgradeVersion = "1540"
-   version = "1.7">
+   version = "2.2">
    <BuildAction
       parallelizeBuildables = "YES"
       buildImplicitDependencies = "YES"
@@ -16,10 +16,19 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "4FBD596F2D05483000807E30"
-               BuildableName = "TasteAtlas.app"
+               BuildableName = "TasteAtlas staging.app"
                BlueprintName = "TasteAtlas"
                ReferencedContainer = "container:TasteAtlas.xcodeproj">
             </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "NO"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "NO">
+            <AutocreatedTestPlanReference>
+            </AutocreatedTestPlanReference>
          </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
@@ -69,7 +78,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "4FBD596F2D05483000807E30"
-            BuildableName = "TasteAtlas.app"
+            BuildableName = "TasteAtlas staging.app"
             BlueprintName = "TasteAtlas"
             ReferencedContainer = "container:TasteAtlas.xcodeproj">
          </BuildableReference>
@@ -92,7 +101,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "4FBD596F2D05483000807E30"
-            BuildableName = "TasteAtlas.app"
+            BuildableName = "TasteAtlas staging.app"
             BlueprintName = "TasteAtlas"
             ReferencedContainer = "container:TasteAtlas.xcodeproj">
          </BuildableReference>
