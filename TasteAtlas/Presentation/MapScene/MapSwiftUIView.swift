@@ -95,32 +95,37 @@ struct MapSwiftUIView: View {
             }
             
             VStack {
-//                SearchBarView(searchText: $query, isSearching: $isSearching)
-                
                 Spacer()
-                
-//                if showPlaceCard {
-//                    PlaceCardView()
-//                        .transition(.move(edge: .bottom))
-//                        .frame(maxWidth: .infinity, maxHeight: 300)
-//                        .background(Color(uiColor: .systemBackground))
-//                        .cornerRadius(12)
-//                        .shadow(radius: 5)
-//                        .padding()
-//                }
                 if showPlaceCard {
-                    PlaceCardView()
+                    PlaceCardView(selectedItem: $selectedMapItem)
                         .transition(.move(edge: .bottom).combined(with: .opacity))
-                        .frame(maxWidth: .infinity)
-                        .frame(height: 300)
+                        .frame(maxWidth: .infinity, maxHeight: 300)
                         .background(
                             RoundedRectangle(cornerRadius: 12)
                                 .fill(Color(uiColor: .systemBackground))
                                 .shadow(radius: 8)
                         )
-                        .padding()
+                        .padding(.horizontal)
+                        .padding(.bottom, 100) // Add padding to lift above tab bar
                 }
             }
+            // Place card overlay (outside TabView)
+//            if showPlaceCard {
+//                VStack {
+//                    Spacer()
+//                    PlaceCardView(selectedItem: $selectedMapItem)
+//                        .transition(.move(edge: .bottom).combined(with: .opacity))
+//                        .frame(maxWidth: .infinity, maxHeight: 300)
+//                        .background(
+//                            RoundedRectangle(cornerRadius: 12)
+//                                .fill(Color(uiColor: .systemBackground))
+//                                .shadow(radius: 8)
+//                        )
+//                        .padding(.horizontal)
+//                        .padding(.bottom, 85) // Add padding to lift above tab bar
+//                }
+//                .ignoresSafeArea(edges: .bottom)
+//            }
         }
 //        .mapItemDetailPopover(item: $selectedMapItem)
         .edgesIgnoringSafeArea(.bottom)
