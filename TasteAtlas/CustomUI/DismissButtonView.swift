@@ -9,7 +9,7 @@ import SwiftUI
 
 struct DismissButtonView: View {
     
-    var size: CGFloat = 12
+    var size: CGFloat = 16
     var onDismiss: () -> Void
     
     var body: some View {
