@@ -11,6 +11,7 @@ import FacebookCore
 import FirebaseAuth
 import FirebaseCore
 import GoogleSignIn
+import GoogleMaps
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -22,6 +23,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         setTabBarAppearance()
         configureFirebase()
         AppAppearance.setupAppearance()
+        
+        guard let infoDictionary: [String: Any] = Bundle.main.infoDictionary else {
+            fatalError("Info.plist not found")
+        }
+        guard let apiKey: String = infoDictionary["MAPS_API_KEY"] as? String else {
+            fatalError("MAPS_API_KEY not set in Info.plist")
+        }
+        
+        GMSServices.provideAPIKey(apiKey)
         
         // Initialize Facebook SDK
         ApplicationDelegate.shared.application(

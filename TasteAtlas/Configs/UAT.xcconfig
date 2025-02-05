@@ -17,6 +17,7 @@ API_BASE_URL = https:/$()/my-normal-cool-staging-url.com
 
 // API Key
 API_KEY = my_super_secret_uat_api_key
+MAPS_API_KEY = AIzaSyANMoCmCFdDimnqM045VI392PZKH618L_o
 
 // Backward Compatible Values
 IS_PRODUCTION = NO
