@@ -14,6 +14,18 @@ import FirebaseCore
 import FirebaseAuth
 import GoogleSignIn
 import GoogleSignInSwift
+import SwiftUI
+
+//struct AuthenticationViewModelEnvironmentKey: EnvironmentKey {
+//    static let defaultValue: AuthenticationViewModel = AuthenticationViewModel()
+//}
+//
+//extension EnvironmentValues {
+//    var authenticationVM: AuthenticationViewModel {
+//        get { self[AuthenticationViewModelEnvironmentKey.self] }
+//        set { self[AuthenticationViewModelEnvironmentKey.self] = newValue }
+//    }
+//}
 
 enum AuthenticationState {
     case unauthenticated
@@ -36,9 +48,13 @@ class AuthenticationViewModel: ObservableObject {
     
     @Published var isValid: Bool = false
     @Published var authenticationState: AuthenticationState = .unauthenticated
-    @Published var errorMessage: String = ""
     @Published var user: User?
+    @Published var errorMessage: String = ""
     @Published var displayName: String = ""
+    
+    /*
+     user.uid → a way to keep track of any document that belong to the user in Cloud FireStore...etc
+     */
     
     private var currentNonce: String?
     private let readPermissions: [String] = ["public_profile", "email"]
@@ -55,15 +71,17 @@ class AuthenticationViewModel: ObservableObject {
             }
             .assign(to: &$isValid)
     }
-    
+    // 儲存Firebase Authentication State參數
     private var authStateHandler: AuthStateDidChangeListenerHandle?
-    
+    // 註冊Firebase Authentication State(Listener)，在AuthenticationViewModel init時呼叫
     func registerAuthStateHandler() {
         if authStateHandler == nil {
+            // 當user sign in，user會有值，反之(sign out)則變成nil
+            // 透過user的狀態來改變authenticationState
             authStateHandler = Auth.auth().addStateDidChangeListener { auth, user in
                 self.user = user
                 self.authenticationState = user == nil ? .unauthenticated : .authenticated
-                self.displayName = user?.email ?? ""
+                self.displayName = user?.email ?? "(unknown)"
             }
         }
     }
@@ -89,33 +107,37 @@ class AuthenticationViewModel: ObservableObject {
     }
 }
 
+// MARK: - Sign in with Email and Password
 extension AuthenticationViewModel {
+    // 使用Email/Password進行登入
     func signInWithEmailPassword() async -> Bool {
         authenticationState = .authenticating
         do {
-            try await Auth.auth().signIn(withEmail: email, password: password)
+            let authResult = try await Auth.auth().signIn(withEmail: email, password: password)
+            user = authResult.user
+            print("User \(authResult.user.uid) signed in")
             return true
         } catch {
             print(error)
             errorMessage = error.localizedDescription
-            authenticationState = .unauthenticated
             return false
         }
     }
-    
+    // 使用Email/Password進行註冊
     func signUpWithEmailPassword() async -> Bool {
         authenticationState = .authenticating
         do {
-            try await Auth.auth().createUser(withEmail: email, password: password)
+            let authResult = try await Auth.auth().createUser(withEmail: email, password: password)
+            user = authResult.user
+            print("User \(authResult.user.uid) signed in")
             return true
         } catch {
             print(error)
             errorMessage = error.localizedDescription
-            authenticationState = .unauthenticated
             return false
         }
     }
-    
+    // 登出
     func signOut() {
         do {
             try Auth.auth().signOut()
@@ -124,7 +146,7 @@ extension AuthenticationViewModel {
             errorMessage = error.localizedDescription
         }
     }
-    
+    // 刪除帳號
     func deleteAccount() async -> Bool {
         do {
             try await user?.delete()
