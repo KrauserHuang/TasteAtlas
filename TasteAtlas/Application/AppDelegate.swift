@@ -12,6 +12,7 @@ import FirebaseAuth
 import FirebaseCore
 import GoogleSignIn
 import GoogleMaps
+//import UserNotifications
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -21,6 +22,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         setTabBarAppearance()
+        Task {
+            await setupNotification()
+        }
         configureFirebase()
         AppAppearance.setupAppearance()
         
@@ -111,6 +115,33 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         appearance.backgroundColor = .darkGrey
         UITabBar.appearance().scrollEdgeAppearance = appearance
         UITabBar.appearance().standardAppearance = appearance
+    }
+    
+    // MARK: - Notification
+    private func setupNotification() async {
+        let center = UNUserNotificationCenter.current()
+        // Obtain the current notification settings
+        let settings = await center.notificationSettings()
+        
+        do {
+            print("Requesting authorization")
+            try await center.requestAuthorization(options: [.alert, .sound, .badge, .provisional])
+        } catch {
+            // Handle error here
+        }
+        
+        // Enable or disable features based on the authorization status
+        
+        guard (settings.authorizationStatus == .authorized) ||
+              (settings.authorizationStatus == .provisional) else { return }
+        
+        if settings.alertSetting == .enabled {
+            print("Alerts are enabled")
+            // Schedule an alert-only notification
+        } else {
+            print("Alerts are disabled")
+            // Schedule a notification with a badge and sound
+        }
     }
     
     // MARK: - Firebase
