@@ -74,6 +74,7 @@
 		4F937D432D1E4F55000D3A2B /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F937D422D1E4F55000D3A2B /* LocationManager.swift */; };
 		4F937D452D1E7909000D3A2B /* MKCoordinateRegion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F937D442D1E7909000D3A2B /* MKCoordinateRegion.swift */; };
 		4F937D492D1E981A000D3A2B /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F937D482D1E981A000D3A2B /* Restaurant.swift */; };
+		4FB33F402D61BBDA0001312E /* GoogleMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB33F3F2D61BBDA0001312E /* GoogleMapViewController.swift */; };
 		4FBD59C72D0689E800807E30 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FBD59B62D0689E800807E30 /* LaunchScreen.storyboard */; };
 		4FBD59C82D0689E800807E30 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FBD59BF2D0689E800807E30 /* Assets.xcassets */; };
 		4FBD59CA2D0689E800807E30 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FBD59B42D0689E800807E30 /* AppDelegate.swift */; };
@@ -173,6 +174,7 @@
 		4F937D422D1E4F55000D3A2B /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		4F937D442D1E7909000D3A2B /* MKCoordinateRegion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MKCoordinateRegion.swift; sourceTree = "<group>"; };
 		4F937D482D1E981A000D3A2B /* Restaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
+		4FB33F3F2D61BBDA0001312E /* GoogleMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleMapViewController.swift; sourceTree = "<group>"; };
 		4FBD59702D05483000807E30 /* TasteAtlas staging.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TasteAtlas staging.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FBD59892D05483300807E30 /* TasteAtlasTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TasteAtlasTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FBD59932D05483300807E30 /* TasteAtlasUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TasteAtlasUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -654,6 +656,7 @@
 			children = (
 				4F7996CB2D0D38E600ED1312 /* MapController.swift */,
 				4F937D3D2D1D5799000D3A2B /* MapSwiftUIView.swift */,
+				4FB33F3F2D61BBDA0001312E /* GoogleMapViewController.swift */,
 			);
 			path = MapScene;
 			sourceTree = "<group>";
@@ -849,6 +852,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4FB33F402D61BBDA0001312E /* GoogleMapViewController.swift in Sources */,
 				4F937D3A2D1D4756000D3A2B /* UIViewController.swift in Sources */,
 				1F61BAB42D35155000B1DEC5 /* DismissButtonView.swift in Sources */,
 				1FDABA762D06F62500110EDC /* MapViewInteractor.swift in Sources */,
