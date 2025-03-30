@@ -120,6 +120,7 @@ extension AuthenticationViewModel {
         } catch {
             print(error)
             errorMessage = error.localizedDescription
+            authenticationState = .unauthenticated
             return false
         }
     }
@@ -134,6 +135,7 @@ extension AuthenticationViewModel {
         } catch {
             print(error)
             errorMessage = error.localizedDescription
+            authenticationState = .unauthenticated
             return false
         }
     }
